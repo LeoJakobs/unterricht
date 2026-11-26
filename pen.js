@@ -398,9 +398,12 @@ function tick(){raf=0;var now=performance.now();cx.clearRect(0,0,innerWidth,inne
   cx.fillStyle='rgba(255,255,255,.85)';cx.beginPath();cx.arc(dot.x-2,dot.y-2,2.2,0,7);cx.fill()}
  if(lstr.length||show)raf=requestAnimationFrame(tick)}
 function kick(){if(!raf)raf=requestAnimationFrame(tick)}
-function laserMove(e,down,first){dot={x:e.clientX,y:e.clientY};dotT=performance.now();dotPen=e.pointerType==='pen'&&!down;
+function laserMove(e,down,first){if(down)clearTimeout(lgT);dot={x:e.clientX,y:e.clientY};dotT=performance.now();dotPen=e.pointerType==='pen'&&!down;
  if(down){if(first||!lstr.length||lstr[lstr.length-1].end)lstr.push({p:[],end:0});lstr[lstr.length-1].p.push([e.clientX,e.clientY])}kick()}
-function laserUp(){lstr.forEach(function(l){if(!l.end)l.end=performance.now()});dotPen=true;dotT=0;kick()}
+/* Nach dem Abheben kurz warten: setzt der Stift in dieser Zeit wieder an, bleiben alle Laserstriche stehen
+   und verblassen erst gemeinsam, wenn endgültig abgehoben wurde. */
+var LGRACE=650,lgT=0;
+function laserUp(){clearTimeout(lgT);lgT=setTimeout(function(){var t=performance.now();lstr.forEach(function(l){if(!l.end)l.end=t});kick()},LGRACE);dotPen=true;dotT=0;kick()}
 function laserHide(){dot=null;kick()}
 
 /* ---------- Gerade Linien und Einrasten ---------- */
