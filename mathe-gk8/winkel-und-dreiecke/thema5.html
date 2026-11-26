@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>5 Dreiecke konstruieren mit SSS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero"><div class="wrap"><div>
+<a class="back" href="index.html">← Alle Themen</a>
+<div class="eyebrow"><span class="numchip">5</span><span>Winkel und Dreiecke · Mathe 8</span></div>
+<h1>Dreiecke konstruieren mit SSS</h1><p>Drei Seiten sind bekannt · Buch S. 74–77</p></div>
+<svg viewBox="0 0 180 160" aria-hidden="true" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><circle cx="90" cy="80" r="64" stroke-width="3" opacity=".9"/><polygon points="40,118 150,104 84,24" stroke-width="3.5"/><line x1="62" y1="2" x2="116" y2="158" stroke-width="2.5" stroke-dasharray="2 8" opacity=".75"/><line x1="8" y1="48" x2="168" y2="118" stroke-width="2.5" stroke-dasharray="2 8" opacity=".75"/><circle cx="90" cy="80" r="5" fill="#fff" stroke="none"/></svg>
+</div></header>
+<div class="wrap">
+<nav class="jump" aria-label="Ansicht"><a href="#erklaerung" id="tab-e">Erklärung</a><a href="#arbeitsplan" id="tab-a">Arbeitsplan</a></nav>
+<main>
+<section class="sec" id="anim" style="margin-top:0">
+<div class="seg" id="scnbtns" role="group" aria-label="Teil der Erklärung"></div>
+<div class="paper">
+<svg id="sv" viewBox="0 0 1000 640" role="img" aria-label="Animierte Konstruktion mit Zirkel und Geodreieck">
+<defs><pattern id="g" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#c9dcec" stroke-width="1"/></pattern></defs>
+<rect width="1000" height="640" fill="url(#g)"/>
+<line x1="620" y1="0" x2="620" y2="640" stroke="#e4a2a2" stroke-width="1.5"/>
+<g id="tools"></g><g id="ink"></g><g id="txt"></g><g id="over"></g>
+</svg>
+</div>
+<div class="bar">
+<button class="pri" id="play">Alles abspielen</button>
+<button id="next">Nächster Schritt</button>
+<button id="reset">Neu starten</button>
+<button id="voice" aria-pressed="true">Vorlesen: an</button>
+<select id="spd" aria-label="Tempo"><option value="2.6">Langsam</option><option value="1.8" selected>Normal</option><option value="1">Schnell</option></select>
+<span class="prog" id="prog" aria-live="polite"></span>
+</div>
+<p class="hint">Mit Leertaste, Pfeil nach rechts oder einem Presenter geht es Schritt für Schritt weiter.</p>
+
+</section>
+
+<section class="sec" id="plan" style="margin-top:0" hidden>
+<div class="seg" id="weg" role="group" aria-label="Weg wählen" hidden>
+<button type="button" data-w="orange" aria-pressed="true">Orange Weg</button>
+<button type="button" data-w="foerder" aria-pressed="false">Förderweg</button>
+</div>
+<div class="pdfrow">
+<button type="button" class="pdf" id="pdfsave" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 11l5 5 5-5"/><path d="M5 21h14"/></svg>PDF speichern</button>
+<a class="pdf alt" id="pdflink" href="pdf/5-dreiecke-konstruieren-sss.pdf" target="_blank" rel="noopener" hidden>PDF in neuem Tab öffnen</a>
+<span class="hint" id="pdfmsg" role="status" style="margin:0"></span>
+</div>
+<div class="sheets" id="sheets">
+<div class="sh"><h3>Seite 1 · Erklärungen</h3><div class="sheetwrap" data-sheet><style>#t5main p{margin: 0;}
+#t5main .word b{display: block;}
+#t5main .pn{display: flex; flex-direction: column; align-items: center; gap: 3px; text-align: center; font-size: 12px; line-height: 1.3;}
+#t5main .pn .no{width: 20px; height: 20px; border-radius: 50%; background: #333333; color: #ffffff; font-weight: 700; font-size: 11.5px; display: flex; align-items: center; justify-content: center;}
+#t5main .pn .pic{background: #FAFAF8; border: 1px solid #DADAD4; border-radius: 6px;}</style><div id="t5main" class="sheet" style="font-family:Arial,Helvetica,sans-serif;color:#1a1a1a"><div style="width: 794px; height: 1123px; box-sizing: border-box; padding: 40px 48px 36px 48px; display: flex; flex-direction: column; gap: 20px; background: #ffffff; font-size: 14px; line-height: 1.5;">
+  <div style="display: flex; flex-direction: column; gap: 8px;">
+    <div style="align-self: flex-start; background: #2E7D4F; color: #ffffff; font-size: 11px; font-weight: 700; letter-spacing: 0.6px; padding: 5px 16px 5px 12px; clip-path: polygon(0 0, 100% 0, calc(100% - 10px) 100%, 0 100%);">ERKLÄRUNGEN</div>
+    <h1 style="margin: 0; font-size: 23px; font-weight: 700;">Dreiecke konstruieren mit SSS – so geht's!</h1>
+    <div style="font-size: 12px; color: #555555;">Mathe · Jahrgang 8 · Grundkurs · Buch S. 74–77</div>
+  </div>
+  <div style="background: #F1F7F2; border: 1px solid #B9D8C2; border-radius: 6px; padding: 10px 14px; display: flex; flex-direction: column; gap: 6px;">
+    <div style="font-size: 12px; font-weight: 700; color: #2E7D4F; letter-spacing: 0.4px;">WICHTIGE WÖRTER</div>
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 24px; row-gap: 6px; font-size: 12.5px; line-height: 1.35;"><div class="word"><b>SSS:</b>Seite – Seite – Seite: alle <b style="display:inline">drei</b> Seitenlängen sind bekannt</div><div class="word"><b>Planfigur:</b>eine Skizze vom Dreieck – nicht genau gezeichnet</div><div class="word"><b>Kreisbogen:</b>ein Stück von einem Kreis – gezeichnet mit dem Zirkel</div><div class="word"><b>Radius:</b>der Abstand von der Zirkelspitze zum Stift</div></div>
+  </div>
+  <div style="position: relative; border: 2px solid #2F6DB5; border-radius: 8px; padding: 14px 16px 14px 22px; display: flex; flex-direction: column; gap: 10px;">
+    <div style="position: absolute; left: -12px; top: -12px; width: 24px; height: 24px; border-radius: 4px; background: #2F6DB5; color: #ffffff; font-weight: 700; font-size: 13px; display: flex; align-items: center; justify-content: center;">1</div>
+    <div style="font-size: 12.5px; font-weight: 700; color: #2F6DB5; letter-spacing: 0.4px;">SO KONSTRUIERST DU: DIE 3 SEITEN SIND BEKANNT</div>
+    <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px;"><div class="pn"><div class="no">1</div><div class="pic"><svg width="150" height="96" viewBox="0 0 150 96" role="img" aria-hidden="true"><line x1="22.0" y1="80.0" x2="100.0" y2="80.0" stroke="#2F6DB5" stroke-width="2" stroke-linecap="round"/><circle cx="22.0" cy="80.0" r="2.2" fill="#1a1a1a"/><circle cx="100.0" cy="80.0" r="2.2" fill="#1a1a1a"/><text x="15.0" y="92.0" font-size="11" fill="#1a1a1a" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif">A</text><text x="107.0" y="92.0" font-size="11" fill="#1a1a1a" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif">B</text><text x="61.0" y="92.0" font-size="10" fill="#1a1a1a" text-anchor="middle" font-family="Arial,Helvetica,sans-serif">c = 6 cm</text></svg></div><div>Zeichne <b>c = 6 cm</b>. Beschrifte A und B.</div></div><div class="pn"><div class="no">2</div><div class="pic"><svg width="150" height="96" viewBox="0 0 150 96" role="img" aria-hidden="true"><line x1="22.0" y1="80.0" x2="100.0" y2="80.0" stroke="#2F6DB5" stroke-width="2" stroke-linecap="round"/><circle cx="22.0" cy="80.0" r="2.2" fill="#1a1a1a"/><circle cx="100.0" cy="80.0" r="2.2" fill="#1a1a1a"/><text x="15.0" y="92.0" font-size="11" fill="#1a1a1a" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif">A</text><text x="107.0" y="92.0" font-size="11" fill="#1a1a1a" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif">B</text><polyline points="33.0,29.2 34.6,29.6 36.2,30.0 37.8,30.5 39.4,31.0 41.0,31.6 42.5,32.2 44.0,32.9 45.5,33.6 47.0,34.4 48.4,35.2 49.9,36.1 51.2,37.0 52.6,38.0 53.9,39.0 55.2,40.0 56.5,41.1 57.7,42.2 58.9,43.4 60.1,44.6 61.2,45.8 62.3,47.1 63.3,48.4 64.3,49.7 65.2,51.1" fill="none" stroke="#C62828" stroke-width="1.6"/><text x="36.0" y="50.0" font-size="10" fill="#C62828" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif">b</text></svg></div><div>Zirkel auf <b>b = 4 cm</b>. Kreisbogen um <b>A</b>.</div></div><div class="pn"><div class="no">3</div><div class="pic"><svg width="150" height="96" viewBox="0 0 150 96" role="img" aria-hidden="true"><line x1="22.0" y1="80.0" x2="100.0" y2="80.0" stroke="#2F6DB5" stroke-width="2" stroke-linecap="round"/><circle cx="22.0" cy="80.0" r="2.2" fill="#1a1a1a"/><circle cx="100.0" cy="80.0" r="2.2" fill="#1a1a1a"/><text x="15.0" y="92.0" font-size="11" fill="#1a1a1a" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif">A</text><text x="107.0" y="92.0" font-size="11" fill="#1a1a1a" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif">B</text><polyline points="33.0,29.2 34.6,29.6 36.2,30.0 37.8,30.5 39.4,31.0 41.0,31.6 42.5,32.2 44.0,32.9 45.5,33.6 47.0,34.4 48.4,35.2 49.9,36.1 51.2,37.0 52.6,38.0 53.9,39.0 55.2,40.0 56.5,41.1 57.7,42.2 58.9,43.4 60.1,44.6 61.2,45.8 62.3,47.1 63.3,48.4 64.3,49.7 65.2,51.1" fill="none" stroke="#C62828" stroke-width="1.6"/><text x="36.0" y="50.0" font-size="10" fill="#C62828" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif">b</text><polyline points="38.7,58.4 39.4,56.4 40.2,54.5 41.0,52.6 42.0,50.8 42.9,48.9 43.9,47.1 45.0,45.3 46.2,43.6 47.4,41.9 48.6,40.2 49.9,38.6 51.2,37.0 52.7,35.5 54.1,34.0 55.6,32.5 57.1,31.1 58.7,29.8 60.3,28.5 62.0,27.3 63.7,26.1 65.5,24.9 67.2,23.9 69.1,22.8 70.9,21.9" fill="none" stroke="#C62828" stroke-width="1.6"/><circle cx="51.2" cy="37.0" r="2.2" fill="#1a1a1a"/><text x="62.2" y="31.0" font-size="11" fill="#1a1a1a" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif">C</text></svg></div><div>Zirkel auf <b>a = 5 cm</b>. Kreisbogen um <b>B</b>. Schnittpunkt = <b>C</b>.</div></div><div class="pn"><div class="no">4</div><div class="pic"><svg width="150" height="96" viewBox="0 0 150 96" role="img" aria-hidden="true"><line x1="22.0" y1="80.0" x2="100.0" y2="80.0" stroke="#2F6DB5" stroke-width="2" stroke-linecap="round"/><circle cx="22.0" cy="80.0" r="2.2" fill="#1a1a1a"/><circle cx="100.0" cy="80.0" r="2.2" fill="#1a1a1a"/><text x="15.0" y="92.0" font-size="11" fill="#1a1a1a" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif">A</text><text x="107.0" y="92.0" font-size="11" fill="#1a1a1a" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif">B</text><line x1="22.0" y1="80.0" x2="51.2" y2="37.0" stroke="#1a1a1a" stroke-width="1.8" stroke-linecap="round"/><line x1="100.0" y1="80.0" x2="51.2" y2="37.0" stroke="#1a1a1a" stroke-width="1.8" stroke-linecap="round"/><circle cx="51.2" cy="37.0" r="2.2" fill="#1a1a1a"/><text x="51.2" y="31.0" font-size="11" fill="#1a1a1a" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif">C</text><text x="28.6" y="58.5" font-size="10" fill="#C62828" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif">b</text><text x="83.6" y="58.5" font-size="10" fill="#C62828" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif">a</text></svg></div><div>Verbinde <b>C</b> mit A und mit B.</div></div></div><div style="display: flex; gap: 16px; align-items: center;"><div style="flex: none;"><svg width="132" height="88" viewBox="0 0 132 88" role="img" aria-hidden="true"><line x1="20.0" y1="70.0" x2="112.0" y2="70.0" stroke="#C62828" stroke-width="2.4" stroke-linecap="round"/><line x1="20.0" y1="70.0" x2="52.0" y2="16.0" stroke="#C62828" stroke-width="2.4" stroke-linecap="round"/><line x1="112.0" y1="70.0" x2="52.0" y2="16.0" stroke="#C62828" stroke-width="2.4" stroke-linecap="round"/><text x="66.0" y="83.0" font-size="11" fill="#C62828" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif">c</text><text x="28.0" y="40.0" font-size="11" fill="#C62828" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif">b</text><text x="88.0" y="38.0" font-size="11" fill="#C62828" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif">a</text><text x="14.0" y="80.0" font-size="11" fill="#1a1a1a" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif">A</text><text x="118.0" y="80.0" font-size="11" fill="#1a1a1a" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif">B</text><text x="52.0" y="11.0" font-size="11" fill="#1a1a1a" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif">C</text></svg></div><div style="flex: 1; font-size: 13px; line-height: 1.5;"><b>Vor dem Zeichnen:</b><br>① Schreibe auf, was <b>gegeben</b> ist: a = 5 cm, b = 4 cm, c = 6 cm.<br>② Skizziere eine <b>Planfigur</b>. Markiere das Gegebene <b style="color:#C62828">rot</b>.<br>③ Konstruiere das Dreieck (Schritte 1–4).</div></div>
+  </div>
+  <div style="position: relative; border: 2px solid #C99A06; border-radius: 8px; padding: 14px 16px 14px 22px; display: flex; flex-direction: column; gap: 10px;">
+    <div style="position: absolute; left: -12px; top: -12px; width: 24px; height: 24px; border-radius: 4px; background: #C99A06; color: #ffffff; font-weight: 700; font-size: 13px; display: flex; align-items: center; justify-content: center;">2</div>
+    <div style="font-size: 12.5px; font-weight: 700; color: #9A7500; letter-spacing: 0.4px;">DREIECKSUNGLEICHUNG: GEHT DAS DREIECK ÜBERHAUPT?</div>
+    <div style="display: flex; gap: 18px; align-items: center;"><div style="flex: none;"><svg width="132" height="90" viewBox="0 0 132 90" role="img" aria-hidden="true"><line x1="6.0" y1="70.0" x2="126.0" y2="70.0" stroke="#2F6DB5" stroke-width="2.2" stroke-linecap="round"/><polyline points="48.4,27.6 49.6,28.8 50.8,30.1 52.0,31.4 53.1,32.8 54.1,34.2 55.1,35.6 56.1,37.0 57.1,38.5 58.0,40.0 58.8,41.5 59.6,43.1 60.4,44.6 61.1,46.2 61.8,47.8 62.4,49.5 63.0,51.1 63.5,52.8 64.0,54.5 64.4,56.2 64.8,57.9 65.1,59.6 65.4,61.3 65.6,63.0 65.8,64.8" fill="none" stroke="#C62828" stroke-width="1.5"/><polyline points="106.1,71.7 106.0,71.0 106.0,70.3 106.0,69.6 106.0,68.8 106.1,68.1 106.2,67.4 106.3,66.7 106.4,66.0 106.6,65.2 106.8,64.5 107.0,63.8 107.2,63.2 107.5,62.5 107.8,61.8 108.1,61.2 108.4,60.5 108.8,59.9 109.1,59.3 109.5,58.6 110.0,58.1 110.4,57.5 110.9,56.9 111.4,56.4 111.9,55.9" fill="none" stroke="#C62828" stroke-width="1.5"/><text x="6.0" y="84.0" font-size="11" fill="#1a1a1a" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif">A</text><text x="126.0" y="84.0" font-size="11" fill="#1a1a1a" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif">B</text><text x="66.0" y="84.0" font-size="10" fill="#1a1a1a" text-anchor="middle" font-family="Arial,Helvetica,sans-serif">c = 5 cm</text><text x="24.0" y="32.0" font-size="10" fill="#C62828" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif">b = 3</text><text x="110.0" y="38.0" font-size="10" fill="#C62828" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif">a = 1</text></svg></div><div style="flex: 1; display: flex; flex-direction: column; gap: 8px; font-size: 13.5px;"><p>Zwei Seiten zusammen müssen <b>länger</b> sein als die dritte Seite. Sonst treffen sich die Kreisbögen nicht.</p><div style="background: #FBF4DD; border-radius: 5px; padding: 7px 12px; text-align: center; font-size: 15px;"><b>kürzere + kürzere &gt; längste</b></div></div></div><div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px;"><div style="background: #F7F7F5; border-radius: 6px; padding: 9px 14px; display: flex; flex-direction: column; gap: 3px; font-size: 13px; line-height: 1.45;"><div style="font-size: 12px; font-weight: 700; color: #555555;">BEISPIEL 1: a = 1 cm, b = 3 cm, c = 5 cm</div><div style="font-size: 15px;">1 + 3 = 4 und 4 &lt; 5</div><div style="color:#C62828; font-weight:700;">✗ Das Dreieck gibt es nicht.</div></div><div style="background: #F7F7F5; border-radius: 6px; padding: 9px 14px; display: flex; flex-direction: column; gap: 3px; font-size: 13px; line-height: 1.45;"><div style="font-size: 12px; font-weight: 700; color: #555555;">BEISPIEL 2: a = 5 cm, b = 4 cm, c = 6 cm</div><div style="font-size: 15px;">5 + 4 = 9 und 9 &gt; 6</div><div style="color:#2E7D32; font-weight:700;">✓ Das Dreieck geht.</div></div></div>
+  </div>
+  <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px;"><div style="border: 1.5px solid #2F6DB5; border-radius: 8px; padding: 11px 12px; text-align: center; font-size: 14.5px; line-height: 1.4;"><b>SSS</b>: 3 Seiten → Zirkel</div><div style="border: 1.5px solid #C99A06; border-radius: 8px; padding: 11px 12px; text-align: center; font-size: 14.5px; line-height: 1.4;">Zwei Seiten zusammen &gt; dritte Seite</div></div>
+</div></div></div></div>
+<div class="sh"><h3 id="p2title">Seite 2 · Arbeitsplan</h3>
+<div class="sheetwrap" data-sheet id="w-orange"><style>#t5orange .grid{display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 8px;}
+#t5orange .tile{position: relative; box-sizing: border-box; border: 2px solid; border-radius: 8px; padding: 8px 4px 9px 4px; text-align: center; background: #ffffff; display: flex; flex-direction: column; align-items: center;}
+#t5orange .to{border-color: #E07B1F;}
+#t5orange .tp{border-color: #C2185B;}
+#t5orange .tf{border-color: #E0AA00;}
+#t5orange .num{font-size: 32px; font-weight: 700; line-height: 1.05; margin-top: 4px;}
+#t5orange .no{color: #C05F0C;}
+#t5orange .np{color: #C2185B;}
+#t5orange .nf{color: #8A6A00;}
+#t5orange .pg{font-size: 10px; color: #777777; line-height: 1; margin-top: 1px;}
+#t5orange .lab{font-size: 11.5px; line-height: 1.25; min-height: 43px; display: flex; align-items: center; justify-content: center; margin: 3px 0 6px 0;}
+#t5orange .chk{display: flex; gap: 5px;}
+#t5orange .cb{display: flex; align-items: center; justify-content: center; font-style: normal; font-size: 11px; color: #C4C4C4; width: 18px; height: 18px; box-sizing: border-box; border: 1.5px solid #8A8A8A; border-radius: 3px;}
+#t5orange .step{display: flex; gap: 8px; align-items: center; border: 1.5px solid #D6D6D6; border-radius: 8px; padding: 8px 10px; font-size: 12.5px; line-height: 1.3;}
+#t5orange .sn{flex: none; width: 22px; height: 22px; border-radius: 50%; background: #333333; color: #ffffff; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center;}
+#t5orange .sub{display: flex; align-items: baseline; gap: 8px; margin: 2px 0 8px 0; font-size: 13.5px; font-weight: 700;}
+#t5orange .sub span{font-size: 12px; font-weight: 400; color: #666666;}</style><div id="t5orange" class="sheet" style="font-family:Arial,Helvetica,sans-serif;color:#1a1a1a"><div style="width: 794px; height: 1123px; box-sizing: border-box; padding: 40px 48px 36px 48px; display: flex; flex-direction: column; gap: 14px; background: #ffffff;">
+  <div style="display: flex; flex-direction: column; gap: 8px;">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+      <div style="background: #E07B1F; color: #ffffff; font-size: 11px; font-weight: 700; letter-spacing: 0.6px; padding: 5px 16px 5px 12px; clip-path: polygon(0 0, 100% 0, calc(100% - 10px) 100%, 0 100%);">ARBEITSPLAN</div>
+      <div style="font-size: 12.5px; padding-top: 4px;">Name: ______________________ &nbsp;&nbsp; Datum: ____________</div>
+    </div>
+    <h1 style="margin: 0; font-size: 23px; font-weight: 700;">Arbeitsplan: Dreiecke konstruieren mit SSS</h1>
+    <div style="font-size: 12px; color: #555555;">Mathe · Jahrgang 8 · Grundkurs · Buch S. 74–77</div>
+  </div>
+  <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px;">
+    <div class="step"><div class="sn">1</div><div><b>Start:</b> Lies die Vorderseite. Schau dir dann Buch S. 74 an.</div></div>
+    <div class="step"><div class="sn">2</div><div><b>Grundlagen</b> – das machen alle.</div></div>
+    <div class="step"><div class="sn">3</div><div><b>Zusatz</b> – danach übst du weiter.</div></div>
+  </div>
+  <div style="font-size: 12px; line-height: 1.5; color: #333333;">
+    1. Kästchen: <b>✓</b> = erledigt &nbsp;&nbsp;·&nbsp;&nbsp; 2. Kästchen: <b>✓</b> = kontrolliert &nbsp;&nbsp;(dann sind es zwei Häkchen: <b>✓✓</b>)</div>
+  <div style="border: 2px solid #E07B1F; border-radius: 10px; overflow: hidden;">
+    <div style="background: #E07B1F; color: #fff; padding: 8px 14px; display: flex; justify-content: space-between; align-items: baseline;"><div style="font-size: 15px; font-weight: 700; letter-spacing: 0.5px;">GRUNDLAGEN</div><div style="font-size: 12.5px;">Buch S. 75</div></div>
+    <div style="padding: 10px 12px 12px 12px;">
+      <div class="sub">Grundlagen – alle 4 Aufgaben<span>der Reihe nach</span></div>
+      <div class="grid"><div class="tile to"><div class="num no">1</div><div class="lab">Beschreibung ordnen</div><div class="chk"><i class="cb"></i><i class="cb"></i></div></div><div class="tile to"><div class="num no">2</div><div class="lab">Dreiecke konstruieren</div><div class="chk"><i class="cb"></i><i class="cb"></i></div></div><div class="tile to"><div class="num no">3</div><div class="lab">Dreieck ABC konstruieren</div><div class="chk"><i class="cb"></i><i class="cb"></i></div></div><div class="tile to"><div class="num no">4</div><div class="lab">Geht das Dreieck?</div><div class="chk"><i class="cb"></i><i class="cb"></i></div></div></div>
+    </div>
+  </div>
+  <div style="border: 2px solid #4B5563; border-radius: 10px; overflow: hidden;">
+    <div style="background: #4B5563; color: #fff; padding: 8px 14px; display: flex; justify-content: space-between; align-items: baseline;"><div style="font-size: 15px; font-weight: 700; letter-spacing: 0.5px;">ZUSATZ</div><div style="font-size: 12.5px;">erst Orange, dann Pink</div></div>
+    <div style="padding: 10px 12px 12px 12px; display: flex; flex-direction: column; gap: 12px;">
+      <div>
+        <div class="sub" style="color: #C05F0C;">Weiter mit Orange – Buch S. 75<span>die Aufgaben, die noch fehlen</span></div>
+        <div class="grid"><div class="tile to"><div class="num no">5</div><div class="lab">Hochsitz im Wald</div><div class="chk"><i class="cb"></i><i class="cb"></i></div></div><div class="tile to"><div class="num no">6</div><div class="lab">Schatzkarte</div><div class="chk"><i class="cb"></i><i class="cb"></i></div></div></div>
+      </div>
+      <div style="border-top: 1.5px dashed #BDBDBD; padding-top: 10px;">
+        <div class="sub" style="color: #C2185B;">Weiter mit Pink – Buch S. 76<span>zum Üben</span></div>
+        <div class="grid"><div class="tile tp"><div class="num np">1</div><div class="lab">Beschreibung ordnen</div><div class="chk"><i class="cb"></i><i class="cb"></i></div></div><div class="tile tp"><div class="num np">2</div><div class="lab">Dreiecke konstruieren</div><div class="chk"><i class="cb"></i><i class="cb"></i></div></div><div class="tile tp"><div class="num np">7</div><div class="lab">Fahrradtour</div><div class="chk"><i class="cb"></i><i class="cb"></i></div></div></div>
+      </div>
+    </div>
+  </div>
+  <div style="border: 2px solid #444444; border-radius: 8px; padding: 12px 16px; font-size: 13px; line-height: 1.55;">
+    <div style="font-weight: 700; font-size: 14px; margin-bottom: 4px;">Ich komme nicht weiter – was mache ich?</div>
+    <div>1. Ich lese die Aufgabe noch einmal gründlich durch.</div>
+    <div>2. Ich schaue auf die Vorderseite und gehe die Schritte nacheinander durch.</div>
+    <div>3. Habe ich die Planfigur gemacht? Hat mein Zirkel den richtigen Radius?</div>
+    <div>4. Ich frage meine Nachbarin oder meinen Nachbarn – im Flüsterton.</div>
+    <div>5. Ich frage die Lehrkraft.</div>
+    <div style="margin-top: 6px; font-size: 12px; color: #333333;">Lösungen nutze ich erst <b>nach</b> der Aufgabe – zum Kontrollieren.</div>
+  </div>
+</div></div></div>
+<div class="sheetwrap" data-sheet id="w-foerder" hidden><style>#t5foerder .grid{display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 8px;}
+#t5foerder .tile{position: relative; box-sizing: border-box; border: 2px solid; border-radius: 8px; padding: 8px 4px 9px 4px; text-align: center; background: #ffffff; display: flex; flex-direction: column; align-items: center;}
+#t5foerder .to{border-color: #E07B1F;}
+#t5foerder .tp{border-color: #C2185B;}
+#t5foerder .tf{border-color: #E0AA00;}
+#t5foerder .num{font-size: 32px; font-weight: 700; line-height: 1.05; margin-top: 4px;}
+#t5foerder .no{color: #C05F0C;}
+#t5foerder .np{color: #C2185B;}
+#t5foerder .nf{color: #8A6A00;}
+#t5foerder .pg{font-size: 10px; color: #777777; line-height: 1; margin-top: 1px;}
+#t5foerder .lab{font-size: 11.5px; line-height: 1.25; min-height: 43px; display: flex; align-items: center; justify-content: center; margin: 3px 0 6px 0;}
+#t5foerder .chk{display: flex; gap: 5px;}
+#t5foerder .cb{display: flex; align-items: center; justify-content: center; font-style: normal; font-size: 11px; color: #C4C4C4; width: 18px; height: 18px; box-sizing: border-box; border: 1.5px solid #8A8A8A; border-radius: 3px;}
+#t5foerder .step{display: flex; gap: 8px; align-items: center; border: 1.5px solid #D6D6D6; border-radius: 8px; padding: 8px 10px; font-size: 12.5px; line-height: 1.3;}
+#t5foerder .sn{flex: none; width: 22px; height: 22px; border-radius: 50%; background: #333333; color: #ffffff; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center;}
+#t5foerder .sub{display: flex; align-items: baseline; gap: 8px; margin: 2px 0 8px 0; font-size: 13.5px; font-weight: 700;}
+#t5foerder .sub span{font-size: 12px; font-weight: 400; color: #666666;}</style><div id="t5foerder" class="sheet" style="font-family:Arial,Helvetica,sans-serif;color:#1a1a1a"><div style="width: 794px; height: 1123px; box-sizing: border-box; padding: 40px 48px 36px 48px; display: flex; flex-direction: column; gap: 14px; background: #ffffff;">
+  <div style="display: flex; flex-direction: column; gap: 8px;">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+      <div style="background: #E07B1F; color: #ffffff; font-size: 11px; font-weight: 700; letter-spacing: 0.6px; padding: 5px 16px 5px 12px; clip-path: polygon(0 0, 100% 0, calc(100% - 10px) 100%, 0 100%);">ARBEITSPLAN</div>
+      <div style="font-size: 12.5px; padding-top: 4px;">Name: ______________________ &nbsp;&nbsp; Datum: ____________</div>
+    </div>
+    <h1 style="margin: 0; font-size: 23px; font-weight: 700;">Arbeitsplan: Dreiecke konstruieren mit SSS</h1>
+    <div style="font-size: 12px; color: #555555;">Mathe · Jahrgang 8 · Grundkurs · Förderheft S. 38–40 · Buch S. 75</div>
+  </div>
+  <div style="background: #F3F3F1; border-radius: 6px; padding: 10px 14px; font-size: 13.5px; line-height: 1.5;">
+    <b>Start:</b> Lies die Vorderseite genau durch.<br>
+    Du arbeitest im <b>Förderheft</b> (Block A). Wenn du dich sicher fühlst, darfst du <b>jederzeit</b> ins <b>Buch</b> wechseln (Block B).
+  </div>
+  <div style="font-size: 12px; line-height: 1.5; color: #333333;">
+    1. Kästchen: <b>✓</b> = erledigt &nbsp;&nbsp;·&nbsp;&nbsp; 2. Kästchen: <b>✓</b> = kontrolliert &nbsp;&nbsp;(dann sind es zwei Häkchen: <b>✓✓</b>)</div>
+  <div style="border: 2px solid #E0AA00; border-radius: 10px; overflow: hidden;">
+    <div style="background: #F2C230; color: #3A2E00; padding: 8px 14px; display: flex; justify-content: space-between; align-items: baseline;"><div style="font-size: 15px; font-weight: 700; letter-spacing: 0.5px;">A · FÖRDERHEFT</div><div style="font-size: 12.5px;">Seite 38–40</div></div>
+    <div style="padding: 10px 12px 12px 12px; display: flex; flex-direction: column; gap: 10px;"><div style=""><div class="sub" style="color: #7A5C00;">Dreiecke mit SSS<span>Förderheft S. 38–40</span></div><div class="grid"><div class="tile tf"><div class="pg">S. 38</div><div class="num nf">1</div><div class="lab">Dreieck: ja oder nein?</div><div class="chk"><i class="cb"></i><i class="cb"></i></div></div><div class="tile tf"><div class="pg">S. 39</div><div class="num nf">2</div><div class="lab">Dreieck konstruieren</div><div class="chk"><i class="cb"></i><i class="cb"></i></div></div><div class="tile tf"><div class="pg">S. 39</div><div class="num nf">3</div><div class="lab">Planfigur und Konstruktion</div><div class="chk"><i class="cb"></i><i class="cb"></i></div></div><div class="tile tf"><div class="pg">S. 39</div><div class="num nf">4</div><div class="lab">Konstruieren mit Zirkel</div><div class="chk"><i class="cb"></i><i class="cb"></i></div></div><div class="tile tf"><div class="pg">S. 40</div><div class="num nf">5</div><div class="lab">Konstruieren, Winkel messen</div><div class="chk"><i class="cb"></i><i class="cb"></i></div></div><div class="tile tf"><div class="pg">S. 40</div><div class="num nf">6</div><div class="lab">Welche Anleitung passt?</div><div class="chk"><i class="cb"></i><i class="cb"></i></div></div></div></div></div>
+  </div>
+  <div style="border: 2px solid #E07B1F; border-radius: 10px; overflow: hidden;">
+    <div style="background: #E07B1F; color: #fff; padding: 8px 14px; display: flex; justify-content: space-between; align-items: baseline;"><div style="font-size: 15px; font-weight: 700; letter-spacing: 0.5px;">B · BUCH (ORANGE)</div><div style="font-size: 12.5px;">Seite 75 · wenn du dich sicher fühlst</div></div>
+    <div style="padding: 10px 12px 12px 12px;"><div class="grid"><div class="tile to"><div class="pg">S. 75</div><div class="num no">1</div><div class="lab">Beschreibung ordnen</div><div class="chk"><i class="cb"></i><i class="cb"></i></div></div><div class="tile to"><div class="pg">S. 75</div><div class="num no">2</div><div class="lab">Dreiecke konstruieren</div><div class="chk"><i class="cb"></i><i class="cb"></i></div></div><div class="tile to"><div class="pg">S. 75</div><div class="num no">3</div><div class="lab">Dreieck ABC konstruieren</div><div class="chk"><i class="cb"></i><i class="cb"></i></div></div><div class="tile to"><div class="pg">S. 75</div><div class="num no">4</div><div class="lab">Geht das Dreieck?</div><div class="chk"><i class="cb"></i><i class="cb"></i></div></div></div></div>
+  </div>
+  <div style="border: 2px solid #444444; border-radius: 8px; padding: 12px 16px; font-size: 13px; line-height: 1.55;">
+    <div style="font-weight: 700; font-size: 14px; margin-bottom: 4px;">Ich komme nicht weiter – was mache ich?</div>
+    <div>1. Ich lese die Aufgabe noch einmal gründlich durch.</div>
+    <div>2. Ich schaue auf die Vorderseite und gehe die Schritte nacheinander durch.</div>
+    <div>3. Habe ich die Planfigur gemacht? Hat mein Zirkel den richtigen Radius?</div>
+    <div>4. Ich frage meine Nachbarin oder meinen Nachbarn – im Flüsterton.</div>
+    <div>5. Ich frage die Lehrkraft.</div>
+    <div style="margin-top: 6px; font-size: 12px; color: #333333;">Lösungen nutze ich erst <b>nach</b> der Aufgabe – zum Kontrollieren.</div>
+  </div>
+</div></div></div>
+</div>
+</div>
+</section>
+</main>
+</div>
+<script>
+(function(){
+var HASF=true,N=5,weg='orange',SLUG='5-dreiecke-konstruieren-sss',FNAME='Dreiecke_konstruieren_SSS';
+function fit(){document.querySelectorAll('[data-sheet]').forEach(function(w){if(w.hidden||w.offsetParent===null)return;var s=w.querySelector('.sheet'),k=w.clientWidth/794;if(!k)return;s.style.transform='scale('+k+')';w.style.height=(1123*k)+'px'})}
+window.addEventListener('resize',fit);
+if(window.ResizeObserver)new ResizeObserver(fit).observe(document.querySelector('.sheets'));
+function route(){var p=location.hash==='#arbeitsplan';
+document.getElementById('anim').hidden=p;document.getElementById('plan').hidden=!p;
+var e=document.getElementById('tab-e'),a=document.getElementById('tab-a');
+if(p){a.setAttribute('aria-current','page');e.removeAttribute('aria-current')}else{e.setAttribute('aria-current','page');a.removeAttribute('aria-current')}
+fit();setTimeout(fit,60);window.scrollTo(0,0)}
+window.addEventListener('hashchange',route);route();
+if(HASF){
+var seg=document.getElementById('weg');seg.hidden=false;
+seg.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;weg=b.dataset.w;
+seg.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});
+document.getElementById('w-orange').hidden=weg!=='orange';document.getElementById('w-foerder').hidden=weg!=='foerder';
+document.getElementById('pdflink').href='pdf/'+SLUG+(weg==='orange'?'':'-foerderweg')+'.pdf';
+document.getElementById('p2title').textContent='Seite 2 · Arbeitsplan ('+(weg==='orange'?'Orange Weg':'Förderweg')+')';
+fit()})}
+/* PDF: wenn das Speichern im Viewer erlaubt ist, als Button; sonst nur der Link */
+var sv=document.getElementById('pdfsave'),lk=document.getElementById('pdflink'),msg=document.getElementById('pdfmsg');
+lk.hidden=false;
+(async function(){try{var d=window.claude&&await claude.use('downloads');if(!d)return;sv.hidden=false;lk.hidden=true;
+sv.addEventListener('click',async function(){msg.textContent='';
+try{var r=await fetch('pdf/'+SLUG+(weg==='orange'?'':'-foerderweg')+'.pdf');if(!r.ok)throw 0;var bl=await r.blob();
+await d.save({filename:'Arbeitsplan_'+FNAME+(weg==='orange'?'':'_Foerderweg')+'.pdf',data:bl});msg.textContent='Gespeichert. Jetzt ausdrucken.'}
+catch(e){msg.textContent=(e&&e.code==='declined')?'Abgebrochen.':'Das Speichern hat nicht geklappt. Bitte frag deine Lehrkraft nach dem Blatt.'}})}catch(e){}})();
+})();
+</script>
+<script src="anim.js"></script><script src="geo.js"></script><script src="konstr.js"></script><script src="scenes-5.js"></script><script src="anim-ui.js"></script>
+<script src="pen.js"></script>
+</body>
+</html>

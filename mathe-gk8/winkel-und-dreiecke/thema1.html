@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>1 Winkel messen und zeichnen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero"><div class="wrap"><div>
+<a class="back" href="index.html">← Alle Themen</a>
+<div class="eyebrow"><span class="numchip">1</span><span>Winkel und Dreiecke · Mathe 8</span></div>
+<h1>Winkel messen und zeichnen</h1><p>Wiederholung · Geodreieck sicher benutzen · Wiederholung</p></div>
+<svg viewBox="0 0 180 160" aria-hidden="true" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><circle cx="90" cy="80" r="64" stroke-width="3" opacity=".9"/><polygon points="40,118 150,104 84,24" stroke-width="3.5"/><line x1="62" y1="2" x2="116" y2="158" stroke-width="2.5" stroke-dasharray="2 8" opacity=".75"/><line x1="8" y1="48" x2="168" y2="118" stroke-width="2.5" stroke-dasharray="2 8" opacity=".75"/><circle cx="90" cy="80" r="5" fill="#fff" stroke="none"/></svg>
+</div></header>
+<div class="wrap">
+<nav class="jump" aria-label="Ansicht"><a href="#erklaerung" id="tab-e">Erklärung</a><a href="#arbeitsplan" id="tab-a">Arbeitsplan</a></nav>
+<main>
+<section class="sec" id="anim" style="margin-top:0">
+<div class="seg" id="scnbtns" role="group" aria-label="Teil der Erklärung"></div>
+<div class="paper">
+<svg id="sv" viewBox="0 0 1000 640" role="img" aria-label="Animierte Konstruktion mit Zirkel und Geodreieck">
+<defs><pattern id="g" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#c9dcec" stroke-width="1"/></pattern></defs>
+<rect width="1000" height="640" fill="url(#g)"/>
+<line x1="620" y1="0" x2="620" y2="640" stroke="#e4a2a2" stroke-width="1.5"/>
+<g id="tools"></g><g id="ink"></g><g id="txt"></g><g id="over"></g>
+</svg>
+</div>
+<div class="bar">
+<button class="pri" id="play">Alles abspielen</button>
+<button id="next">Nächster Schritt</button>
+<button id="reset">Neu starten</button>
+<button id="voice" aria-pressed="true">Vorlesen: an</button>
+<select id="spd" aria-label="Tempo"><option value="2.6">Langsam</option><option value="1.8" selected>Normal</option><option value="1">Schnell</option></select>
+<span class="prog" id="prog" aria-live="polite"></span>
+</div>
+<p class="hint">Mit Leertaste, Pfeil nach rechts oder einem Presenter geht es Schritt für Schritt weiter.</p>
+
+</section>
+
+<section class="sec" id="plan" style="margin-top:0" hidden>
+<div class="seg" id="weg" role="group" aria-label="Weg wählen" hidden>
+<button type="button" data-w="orange" aria-pressed="true">Orange Weg</button>
+<button type="button" data-w="foerder" aria-pressed="false">Förderweg</button>
+</div>
+<div class="pdfrow">
+<button type="button" class="pdf" id="pdfsave" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 11l5 5 5-5"/><path d="M5 21h14"/></svg>PDF speichern</button>
+<a class="pdf alt" id="pdflink" href="pdf/1-winkel-messen-und-zeichnen.pdf" target="_blank" rel="noopener" hidden>PDF in neuem Tab öffnen</a>
+<span class="hint" id="pdfmsg" role="status" style="margin:0"></span>
+</div>
+<div class="sheets" id="sheets">
+<div class="sh"><h3>Seite 1 · Erklärungen</h3><div class="sheetwrap" data-sheet><style>#t1main p{margin: 0;}
+#t1main .word b{display: block;}
+#t1main .step{display: flex; gap: 8px; align-items: flex-start;}
+#t1main .sn{flex: none; width: 20px; height: 20px; border-radius: 50%; color: #ffffff; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; margin-top: 1px;}</style><div id="t1main" class="sheet" style="font-family:Arial,Helvetica,sans-serif;color:#1a1a1a"><div style="width: 794px; height: 1123px; box-sizing: border-box; padding: 40px 48px 36px 48px; display: flex; flex-direction: column; gap: 22px; background: #ffffff; font-size: 14px; line-height: 1.5;">
+
+  <!-- Kopf -->
+  <div style="display: flex; flex-direction: column; gap: 8px;">
+    <div style="align-self: flex-start; background: #2E7D4F; color: #ffffff; font-size: 11px; font-weight: 700; letter-spacing: 0.6px; padding: 5px 16px 5px 12px; clip-path: polygon(0 0, 100% 0, calc(100% - 10px) 100%, 0 100%);">ERKLÄRUNGEN</div>
+    <h1 style="margin: 0; font-size: 23px; font-weight: 700;">Winkel messen und zeichnen – so geht's!</h1>
+    <div style="font-size: 12px; color: #555555;">Mathe · Jahrgang 8 · Grundkurs · Wiederholung</div>
+  </div>
+
+  <!-- Wichtige Wörter -->
+  <div style="background: #F1F7F2; border: 1px solid #B9D8C2; border-radius: 6px; padding: 10px 14px; display: flex; flex-direction: column; gap: 6px;">
+    <div style="font-size: 12px; font-weight: 700; color: #2E7D4F; letter-spacing: 0.4px;">WICHTIGE WÖRTER</div>
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 24px; row-gap: 6px; font-size: 12.5px; line-height: 1.35;">
+      <div class="word"><b>Scheitelpunkt S:</b>die Ecke des Winkels – hier beginnen beide Linien</div>
+      <div class="word"><b>Schenkel:</b>die beiden Linien, die den Winkel bilden</div>
+      <div class="word"><b>Grad (°):</b>die Einheit für Winkel, z. B. 50°</div>
+      <div class="word"><b>Nullpunkt:</b>die Mitte der langen Seite am Geodreieck (bei der 0)</div>
+    </div>
+  </div>
+
+  <!-- Kasten 1: Winkelarten -->
+  <div style="position: relative; border: 2px solid #2F6DB5; border-radius: 8px; padding: 14px 16px 12px 22px; display: flex; flex-direction: column; gap: 10px;">
+    <div style="position: absolute; left: -12px; top: -12px; width: 24px; height: 24px; border-radius: 4px; background: #2F6DB5; color: #ffffff; font-weight: 700; font-size: 13px; display: flex; align-items: center; justify-content: center;">1</div>
+    <div style="font-size: 12.5px; font-weight: 700; color: #2F6DB5; letter-spacing: 0.4px;">WINKELARTEN</div>
+    <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px;">
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 4px; background: #F5F8FC; border-radius: 6px; padding: 8px 4px;">
+        <svg width="120" height="66" viewBox="0 0 120 66" role="img" aria-label="Spitzer Winkel">
+          <path d="M20,60 L38,60 A18,18 0 0,0 33.8,48.4 Z" fill="#BBD3F0" stroke="#2F6DB5" stroke-width="1.2"></path>
+          <line x1="20" y1="60" x2="110" y2="60" stroke="#1a1a1a" stroke-width="1.8"></line>
+          <line x1="20" y1="60" x2="81.3" y2="8.6" stroke="#1a1a1a" stroke-width="1.8"></line>
+        </svg>
+        <b>spitz</b>
+        <div style="font-size: 12.5px;">kleiner als 90°</div>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 4px; background: #F5F8FC; border-radius: 6px; padding: 8px 4px;">
+        <svg width="120" height="66" viewBox="0 0 120 66" role="img" aria-label="Rechter Winkel">
+          <path d="M40,60 L40,46 L54,46 L54,60 Z" fill="#BBD3F0" stroke="#2F6DB5" stroke-width="1.2"></path>
+          <circle cx="47" cy="53" r="1.6" fill="#1a1a1a"></circle>
+          <line x1="40" y1="60" x2="112" y2="60" stroke="#1a1a1a" stroke-width="1.8"></line>
+          <line x1="40" y1="60" x2="40" y2="4" stroke="#1a1a1a" stroke-width="1.8"></line>
+        </svg>
+        <b>rechter Winkel</b>
+        <div style="font-size: 12.5px;">genau 90°</div>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 4px; background: #F5F8FC; border-radius: 6px; padding: 8px 4px;">
+        <svg width="120" height="66" viewBox="0 0 120 66" role="img" aria-label="Stumpfer Winkel">
+          <path d="M65,60 L81,60 A16,16 0 0,0 54.7,47.7 Z" fill="#BBD3F0" stroke="#2F6DB5" stroke-width="1.2"></path>
+          <line x1="65" y1="60" x2="115" y2="60" stroke="#1a1a1a" stroke-width="1.8"></line>
+          <line x1="65" y1="60" x2="20" y2="6.4" stroke="#1a1a1a" stroke-width="1.8"></line>
+        </svg>
+        <b>stumpf</b>
+        <div style="font-size: 12.5px;">zwischen 90° und 180°</div>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 4px; background: #F5F8FC; border-radius: 6px; padding: 8px 4px;">
+        <svg width="120" height="66" viewBox="0 0 120 66" role="img" aria-label="Gestreckter Winkel">
+          <path d="M60,55 L78,55 A18,18 0 0,0 42,55 Z" fill="#BBD3F0" stroke="#2F6DB5" stroke-width="1.2"></path>
+          <line x1="5" y1="55" x2="115" y2="55" stroke="#1a1a1a" stroke-width="1.8"></line>
+          <circle cx="60" cy="55" r="2.5" fill="#1a1a1a"></circle>
+        </svg>
+        <b>gestreckt</b>
+        <div style="font-size: 12.5px;">genau 180°</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Kasten 2: Messen -->
+  <div style="position: relative; border: 2px solid #C99A06; border-radius: 8px; padding: 14px 16px 14px 22px; display: flex; flex-direction: column; gap: 10px;">
+    <div style="position: absolute; left: -12px; top: -12px; width: 24px; height: 24px; border-radius: 4px; background: #C99A06; color: #ffffff; font-weight: 700; font-size: 13px; display: flex; align-items: center; justify-content: center;">2</div>
+    <div style="font-size: 12.5px; font-weight: 700; color: #9A7500; letter-spacing: 0.4px;">SO MISST DU EINEN WINKEL</div>
+    <div style="display: flex; gap: 18px; align-items: center;">
+      <svg width="300" height="176" viewBox="0 0 340 200" role="img" aria-label="Geodreieck liegt mit dem Nullpunkt auf dem Scheitelpunkt S und misst einen Winkel von 50 Grad">
+        <polygon points="0,175 340,175 170,5" fill="#EEF4FB" stroke="#8FB0D6" stroke-width="1.5"></polygon>
+        <path d="M273,175 A103,103 0 0,0 67,175" fill="none" stroke="#5C7FA8" stroke-width="8" stroke-dasharray="1 16.977"></path>
+        <text x="267" y="123" font-size="13" font-weight="700" fill="#2F6DB5" text-anchor="middle">30</text>
+        <text x="226" y="82" font-size="13" font-weight="700" fill="#2F6DB5" text-anchor="middle">60</text>
+        <text x="170" y="67" font-size="13" font-weight="700" fill="#2F6DB5" text-anchor="middle">90</text>
+        <text x="114" y="82" font-size="13" font-weight="700" fill="#2F6DB5" text-anchor="middle">120</text>
+        <text x="73" y="123" font-size="13" font-weight="700" fill="#2F6DB5" text-anchor="middle">150</text>
+        <text x="243" y="136" font-size="11" fill="#8A8A8A" text-anchor="middle">150</text>
+        <text x="212" y="106" font-size="11" fill="#8A8A8A" text-anchor="middle">120</text>
+        <text x="170" y="95" font-size="11" fill="#8A8A8A" text-anchor="middle">90</text>
+        <text x="128" y="106" font-size="11" fill="#8A8A8A" text-anchor="middle">60</text>
+        <text x="97" y="136" font-size="11" fill="#8A8A8A" text-anchor="middle">30</text>
+        <path d="M170,175 L192,175 A22,22 0 0,0 184.1,158.1 Z" fill="#BBD3F0" stroke="#2F6DB5" stroke-width="1.2"></path>
+        <line x1="170" y1="175" x2="335" y2="175" stroke="#1a1a1a" stroke-width="2.4"></line>
+        <line x1="170" y1="175" x2="266.4" y2="60.1" stroke="#1a1a1a" stroke-width="2.4"></line>
+        <circle cx="236.2" cy="96.1" r="5" fill="none" stroke="#C62828" stroke-width="2"></circle>
+        <text x="262" y="100" font-size="15" font-weight="700" fill="#C62828">50°</text>
+        <line x1="170" y1="168" x2="170" y2="182" stroke="#C62828" stroke-width="2"></line>
+        <text x="170" y="196" font-size="13" font-weight="700" fill="#1a1a1a" text-anchor="middle">S</text>
+      </svg>
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 8px;">
+        <div class="step"><div class="sn" style="background: #C99A06;">1</div><div>Lege den <b>Nullpunkt</b> genau auf den <b>Scheitelpunkt S</b>.</div></div>
+        <div class="step"><div class="sn" style="background: #C99A06;">2</div><div>Lege die <b>lange Seite</b> genau auf einen <b>Schenkel</b>.</div></div>
+        <div class="step"><div class="sn" style="background: #C99A06;">3</div><div>Lies am anderen Schenkel ab. Nimm die Skala, die <b>bei deinem ersten Schenkel mit 0 beginnt</b>.</div></div>
+      </div>
+    </div>
+    <div style="background: #FBF4DD; border-radius: 6px; padding: 8px 12px; font-size: 13.5px;">
+      <b>Kontrolle:</b> Ist der Winkel spitz? → Die Zahl muss <b>kleiner als 90°</b> sein. Ist er stumpf? → <b>größer als 90°</b>.
+    </div>
+  </div>
+
+  <!-- Kasten 3: Zeichnen -->
+  <div style="position: relative; border: 2px solid #4E8F63; border-radius: 8px; padding: 14px 16px 14px 22px; display: flex; flex-direction: column; gap: 10px;">
+    <div style="position: absolute; left: -12px; top: -12px; width: 24px; height: 24px; border-radius: 4px; background: #4E8F63; color: #ffffff; font-weight: 700; font-size: 13px; display: flex; align-items: center; justify-content: center;">3</div>
+    <div style="font-size: 12.5px; font-weight: 700; color: #2E7D4F; letter-spacing: 0.4px;">SO ZEICHNEST DU EINEN WINKEL (Beispiel: 50°)</div>
+    <div style="display: flex; gap: 18px; align-items: center;">
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 8px;">
+        <div class="step"><div class="sn" style="background: #4E8F63;">1</div><div>Zeichne einen <b>Schenkel</b> mit dem Lineal. Markiere den Anfang als <b>S</b>.</div></div>
+        <div class="step"><div class="sn" style="background: #4E8F63;">2</div><div>Lege den <b>Nullpunkt auf S</b> und die lange Seite auf den Schenkel.</div></div>
+        <div class="step"><div class="sn" style="background: #4E8F63;">3</div><div>Mache bei <b>50°</b> einen kleinen <b>Punkt</b>. (Skala, die am Schenkel mit 0 beginnt!)</div></div>
+        <div class="step"><div class="sn" style="background: #4E8F63;">4</div><div>Verbinde <b>S mit dem Punkt</b>. Zeichne den Winkelbogen ein.</div></div>
+      </div>
+      <svg width="230" height="136" viewBox="0 0 230 136" role="img" aria-label="Fertig gezeichneter Winkel von 50 Grad mit markiertem Punkt">
+        <path d="M30,118 L56,118 A26,26 0 0,0 46.7,98.1 Z" fill="#C5E5C9" stroke="#2E7D32" stroke-width="1.2"></path>
+        <line x1="30" y1="118" x2="215" y2="118" stroke="#1a1a1a" stroke-width="2"></line>
+        <line x1="30" y1="118" x2="113.6" y2="18.4" stroke="#1a1a1a" stroke-width="2"></line>
+        <line x1="107.6" y1="12.4" x2="119.6" y2="24.4" stroke="#C62828" stroke-width="2"></line>
+        <line x1="107.6" y1="24.4" x2="119.6" y2="12.4" stroke="#C62828" stroke-width="2"></line>
+        <text x="128" y="24" font-size="13" font-weight="700" fill="#C62828">Punkt bei 50°</text>
+        <text x="68" y="110" font-size="14" font-weight="700" fill="#2E7D32">50°</text>
+        <text x="24" y="134" font-size="13" font-weight="700" fill="#1a1a1a">S</text>
+      </svg>
+    </div>
+  </div>
+
+</div></div></div></div>
+<div class="sh"><h3 id="p2title">Seite 2 · Arbeitsplan</h3>
+<div class="sheetwrap" data-sheet id="w-orange"><style>#t1orange .cell{border: 1px solid #DADADA; border-radius: 6px; padding: 4px 8px 6px 8px; display: flex; flex-direction: column; gap: 2px;}
+#t1orange .lbl{font-size: 13px; font-weight: 700;}
+#t1orange .ans{display: flex; justify-content: space-between; font-size: 13px; padding: 0 4px;}
+#t1orange .task{display: flex; align-items: center; gap: 10px;}
+#t1orange .nr{min-width: 24px; height: 22px; padding: 0 6px; box-sizing: border-box; border-radius: 4px; color: #ffffff; font-weight: 700; font-size: 12.5px; display: flex; align-items: center; justify-content: center; flex: none;}</style><div id="t1orange" class="sheet" style="font-family:Arial,Helvetica,sans-serif;color:#1a1a1a"><div style="width: 794px; height: 1123px; box-sizing: border-box; padding: 30px 48px 24px 48px; display: flex; flex-direction: column; gap: 10px; background: #ffffff;">
+
+  <!-- Kopf -->
+  <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+    <div style="background: #E07B1F; color: #ffffff; font-size: 11px; font-weight: 700; letter-spacing: 0.6px; padding: 5px 16px 5px 12px; clip-path: polygon(0 0, 100% 0, calc(100% - 10px) 100%, 0 100%);">AUFGABEN</div>
+    <div style="font-size: 12.5px; padding-top: 4px;">Name: ______________________ &nbsp;&nbsp; Datum: ____________</div>
+  </div>
+  <h1 style="margin: 0; font-size: 22px; font-weight: 700;">Winkel messen und zeichnen</h1>
+
+  <!-- Aufgabe 1 -->
+  <div class="task"><div class="nr" style="background: #E07B1F;">1</div><div style="font-size: 14px;">Schreibe zuerst die <b>Winkelart</b> auf. <b>Miss</b> dann den Winkel. <span style="color: #555555; font-size: 12.5px;">(Kasten 1+2)</span></div></div>
+
+  <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px;">
+    <div class="cell"><svg width="327" height="195" viewBox="0 0 327 195" role="img" aria-label="Winkel a zum Messen"><path d="M30.0,185.0 L56.0,185.0 A26,26 0 0,0 51.3,170.1 Z" fill="#BBD3F0" stroke="#2F6DB5" stroke-width="1.2"></path><line x1="30" y1="185" x2="230.0" y2="185.0" stroke="#1a1a1a" stroke-width="1.8"></line><line x1="30" y1="185" x2="193.8" y2="70.3" stroke="#1a1a1a" stroke-width="1.8"></line></svg><div class="ans"><span><b>a)</b> &nbsp;Winkelart: ______________</span><span>α = ________°</span></div></div>
+    <div class="cell"><svg width="327" height="195" viewBox="0 0 327 195" role="img" aria-label="Winkel b zum Messen"><path d="M115.0,190.0 L141.0,190.0 A26,26 0 0,0 102.0,167.5 Z" fill="#BBD3F0" stroke="#2F6DB5" stroke-width="1.2"></path><line x1="115" y1="190" x2="315.0" y2="190.0" stroke="#1a1a1a" stroke-width="1.8"></line><line x1="115" y1="190" x2="15.0" y2="16.8" stroke="#1a1a1a" stroke-width="1.8"></line></svg><div class="ans"><span><b>b)</b> &nbsp;Winkelart: ______________</span><span>β = ________°</span></div></div>
+    <div class="cell"><svg width="327" height="195" viewBox="0 0 327 195" role="img" aria-label="Winkel c zum Messen"><path d="M290.0,185.0 L264.0,185.0 A26,26 0 0,1 279.0,161.4 Z" fill="#BBD3F0" stroke="#2F6DB5" stroke-width="1.2"></path><line x1="290" y1="185" x2="90.0" y2="185.0" stroke="#1a1a1a" stroke-width="1.8"></line><line x1="290" y1="185" x2="205.5" y2="3.7" stroke="#1a1a1a" stroke-width="1.8"></line></svg><div class="ans"><span><b>c)</b> &nbsp;Winkelart: ______________</span><span>γ = ________°</span></div></div>
+    <div class="cell"><svg width="327" height="195" viewBox="0 0 327 195" role="img" aria-label="Winkel d zum Messen"><path d="M100.0,190.0 L126.0,190.0 A26,26 0 0,0 91.1,165.6 Z" fill="#BBD3F0" stroke="#2F6DB5" stroke-width="1.2"></path><line x1="100" y1="190" x2="300.0" y2="190.0" stroke="#1a1a1a" stroke-width="1.8"></line><line x1="100" y1="190" x2="31.6" y2="2.1" stroke="#1a1a1a" stroke-width="1.8"></line></svg><div class="ans"><span><b>d)</b> &nbsp;Winkelart: ______________</span><span>δ = ________°</span></div></div>
+  </div>
+
+  <!-- Aufgabe 2 -->
+  <div class="task"><div class="nr" style="background: #E07B1F;">2</div><div style="font-size: 14px;"><b>Zeichne</b> die Winkel. Der erste Schenkel und S sind schon da. <span style="color: #555555; font-size: 12.5px;">(Kasten 3)</span></div></div>
+
+  <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px;">
+    <div class="cell"><div class="lbl">a) &nbsp;α = 50°</div><svg width="327" height="165" viewBox="0 0 327 165" role="img" aria-label="Schenkel mit Scheitelpunkt S zum Zeichnen"><line x1="140" y1="150" x2="312" y2="150" stroke="#1a1a1a" stroke-width="1.8"></line><circle cx="140" cy="150" r="2.6" fill="#1a1a1a"></circle><text x="128" y="163" font-size="14" font-weight="700" fill="#1a1a1a">S</text></svg></div>
+    <div class="cell"><div class="lbl">b) &nbsp;β = 90°</div><svg width="327" height="165" viewBox="0 0 327 165" role="img" aria-label="Schenkel mit Scheitelpunkt S zum Zeichnen"><line x1="140" y1="150" x2="312" y2="150" stroke="#1a1a1a" stroke-width="1.8"></line><circle cx="140" cy="150" r="2.6" fill="#1a1a1a"></circle><text x="128" y="163" font-size="14" font-weight="700" fill="#1a1a1a">S</text></svg></div>
+    <div class="cell"><div class="lbl">c) &nbsp;γ = 130°</div><svg width="327" height="165" viewBox="0 0 327 165" role="img" aria-label="Schenkel mit Scheitelpunkt S zum Zeichnen"><line x1="140" y1="150" x2="312" y2="150" stroke="#1a1a1a" stroke-width="1.8"></line><circle cx="140" cy="150" r="2.6" fill="#1a1a1a"></circle><text x="128" y="163" font-size="14" font-weight="700" fill="#1a1a1a">S</text></svg></div>
+    <div class="cell"><div class="lbl">d) &nbsp;δ = 25°</div><svg width="327" height="165" viewBox="0 0 327 165" role="img" aria-label="Schenkel mit Scheitelpunkt S zum Zeichnen"><line x1="140" y1="150" x2="312" y2="150" stroke="#1a1a1a" stroke-width="1.8"></line><circle cx="140" cy="150" r="2.6" fill="#1a1a1a"></circle><text x="128" y="163" font-size="14" font-weight="700" fill="#1a1a1a">S</text></svg></div>
+  </div>
+
+  <!-- Bonus -->
+  <div style="border: 1.5px solid #C2185B; border-radius: 8px; padding: 8px 14px; display: flex; gap: 10px; align-items: flex-start; font-size: 13px; line-height: 1.4;">
+    <div class="nr" style="background: #C2185B;">Zusatz</div>
+    <div>Zeichne ins Heft: <b>20°, 75°, 145°, 170°</b>. Tausche dein Heft mit deiner Nachbarin oder deinem Nachbarn – messt gegenseitig nach.</div>
+  </div>
+
+</div></div></div>
+<div class="sheetwrap" data-sheet id="w-foerder" hidden></div>
+</div>
+</div>
+</section>
+</main>
+</div>
+<script>
+(function(){
+var HASF=false,N=1,weg='orange',SLUG='1-winkel-messen-und-zeichnen',FNAME='Winkel_messen_und_zeichnen';
+function fit(){document.querySelectorAll('[data-sheet]').forEach(function(w){if(w.hidden||w.offsetParent===null)return;var s=w.querySelector('.sheet'),k=w.clientWidth/794;if(!k)return;s.style.transform='scale('+k+')';w.style.height=(1123*k)+'px'})}
+window.addEventListener('resize',fit);
+if(window.ResizeObserver)new ResizeObserver(fit).observe(document.querySelector('.sheets'));
+function route(){var p=location.hash==='#arbeitsplan';
+document.getElementById('anim').hidden=p;document.getElementById('plan').hidden=!p;
+var e=document.getElementById('tab-e'),a=document.getElementById('tab-a');
+if(p){a.setAttribute('aria-current','page');e.removeAttribute('aria-current')}else{e.setAttribute('aria-current','page');a.removeAttribute('aria-current')}
+fit();setTimeout(fit,60);window.scrollTo(0,0)}
+window.addEventListener('hashchange',route);route();
+if(HASF){
+var seg=document.getElementById('weg');seg.hidden=false;
+seg.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;weg=b.dataset.w;
+seg.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});
+document.getElementById('w-orange').hidden=weg!=='orange';document.getElementById('w-foerder').hidden=weg!=='foerder';
+document.getElementById('pdflink').href='pdf/'+SLUG+(weg==='orange'?'':'-foerderweg')+'.pdf';
+document.getElementById('p2title').textContent='Seite 2 · Arbeitsplan ('+(weg==='orange'?'Orange Weg':'Förderweg')+')';
+fit()})}
+/* PDF: wenn das Speichern im Viewer erlaubt ist, als Button; sonst nur der Link */
+var sv=document.getElementById('pdfsave'),lk=document.getElementById('pdflink'),msg=document.getElementById('pdfmsg');
+lk.hidden=false;
+(async function(){try{var d=window.claude&&await claude.use('downloads');if(!d)return;sv.hidden=false;lk.hidden=true;
+sv.addEventListener('click',async function(){msg.textContent='';
+try{var r=await fetch('pdf/'+SLUG+(weg==='orange'?'':'-foerderweg')+'.pdf');if(!r.ok)throw 0;var bl=await r.blob();
+await d.save({filename:'Arbeitsplan_'+FNAME+(weg==='orange'?'':'_Foerderweg')+'.pdf',data:bl});msg.textContent='Gespeichert. Jetzt ausdrucken.'}
+catch(e){msg.textContent=(e&&e.code==='declined')?'Abgebrochen.':'Das Speichern hat nicht geklappt. Bitte frag deine Lehrkraft nach dem Blatt.'}})}catch(e){}})();
+})();
+</script>
+<script src="anim.js"></script><script src="geo.js"></script><script src="scenes-1.js"></script><script src="anim-ui.js"></script>
+<script src="pen.js"></script>
+</body>
+</html>

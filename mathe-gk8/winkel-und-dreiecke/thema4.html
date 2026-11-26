@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>4 Mittelsenkrechte und Umkreis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero"><div class="wrap"><div>
+<a class="back" href="index.html">← Alle Themen</a>
+<div class="eyebrow"><span class="numchip">4</span><span>Winkel und Dreiecke · Mathe 8</span></div>
+<h1>Mittelsenkrechte und Umkreis</h1><p>Konstruieren mit Zirkel und Geodreieck · Buch S. 56–59</p></div>
+<svg viewBox="0 0 180 160" aria-hidden="true" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><circle cx="90" cy="80" r="64" stroke-width="3" opacity=".9"/><polygon points="40,118 150,104 84,24" stroke-width="3.5"/><line x1="62" y1="2" x2="116" y2="158" stroke-width="2.5" stroke-dasharray="2 8" opacity=".75"/><line x1="8" y1="48" x2="168" y2="118" stroke-width="2.5" stroke-dasharray="2 8" opacity=".75"/><circle cx="90" cy="80" r="5" fill="#fff" stroke="none"/></svg>
+</div></header>
+<div class="wrap">
+<nav class="jump" aria-label="Ansicht"><a href="#erklaerung" id="tab-e">Erklärung</a><a href="#arbeitsplan" id="tab-a">Arbeitsplan</a></nav>
+<main>
+<section class="sec" id="anim" style="margin-top:0">
+<div class="seg" id="scnbtns" role="group" aria-label="Teil der Erklärung"></div>
+<div class="paper">
+<svg id="sv" viewBox="0 0 1000 640" role="img" aria-label="Animierte Konstruktion mit Zirkel und Geodreieck">
+<defs><pattern id="g" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#c9dcec" stroke-width="1"/></pattern></defs>
+<rect width="1000" height="640" fill="url(#g)"/>
+<line x1="620" y1="0" x2="620" y2="640" stroke="#e4a2a2" stroke-width="1.5"/>
+<g id="tools"></g><g id="ink"></g><g id="txt"></g><g id="over"></g>
+</svg>
+</div>
+<div class="bar">
+<button class="pri" id="play">Alles abspielen</button>
+<button id="next">Nächster Schritt</button>
+<button id="reset">Neu starten</button>
+<button id="voice" aria-pressed="true">Vorlesen: an</button>
+<select id="spd" aria-label="Tempo"><option value="2.6">Langsam</option><option value="1.8" selected>Normal</option><option value="1">Schnell</option></select>
+<span class="prog" id="prog" aria-live="polite"></span>
+</div>
+<p class="hint">Mit Leertaste, Pfeil nach rechts oder einem Presenter geht es Schritt für Schritt weiter.</p>
+
+</section>
+
+<section class="sec" id="plan" style="margin-top:0" hidden>
+<div class="seg" id="weg" role="group" aria-label="Weg wählen" hidden>
+<button type="button" data-w="orange" aria-pressed="true">Orange Weg</button>
+<button type="button" data-w="foerder" aria-pressed="false">Förderweg</button>
+</div>
+<div class="pdfrow">
+<button type="button" class="pdf" id="pdfsave" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 11l5 5 5-5"/><path d="M5 21h14"/></svg>PDF speichern</button>
+<a class="pdf alt" id="pdflink" href="pdf/4-mittelsenkrechte-und-umkreis.pdf" target="_blank" rel="noopener" hidden>PDF in neuem Tab öffnen</a>
+<span class="hint" id="pdfmsg" role="status" style="margin:0"></span>
+</div>
+<div class="sheets" id="sheets">
+<div class="sh"><h3>Seite 1 · Erklärungen</h3><div class="sheetwrap" data-sheet><style>#t4main p{margin: 0;}
+#t4main .word b{display: block;}
+#t4main .step{display: flex; gap: 8px; align-items: flex-start;}
+#t4main .sn{flex: none; width: 20px; height: 20px; border-radius: 50%; color: #ffffff; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; margin-top: 1px;}</style><div id="t4main" class="sheet" style="font-family:Arial,Helvetica,sans-serif;color:#1a1a1a"><div style="width: 794px; height: 1123px; box-sizing: border-box; padding: 36px 48px 30px 48px; display: flex; flex-direction: column; gap: 18px; background: #ffffff; font-size: 13.5px; line-height: 1.45;">
+
+  <!-- Kopf -->
+  <div style="display: flex; flex-direction: column; gap: 6px;">
+    <div style="align-self: flex-start; background: #2E7D4F; color: #ffffff; font-size: 11px; font-weight: 700; letter-spacing: 0.6px; padding: 5px 16px 5px 12px; clip-path: polygon(0 0, 100% 0, calc(100% - 10px) 100%, 0 100%);">ERKLÄRUNGEN</div>
+    <h1 style="margin: 0; font-size: 23px; font-weight: 700;">Mittelsenkrechte und Umkreis – so geht's!</h1>
+    <div style="font-size: 12px; color: #555555;">Mathe · Jahrgang 8 · Grundkurs · Buch S. 56</div>
+  </div>
+
+  <!-- Wichtige Wörter -->
+  <div style="background: #F1F7F2; border: 1px solid #B9D8C2; border-radius: 6px; padding: 9px 14px; display: flex; flex-direction: column; gap: 5px;">
+    <div style="font-size: 12px; font-weight: 700; color: #2E7D4F; letter-spacing: 0.4px;">WICHTIGE WÖRTER</div>
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 24px; row-gap: 5px; font-size: 12.5px; line-height: 1.3;">
+      <div class="word"><b>Strecke AB:</b>die gerade Verbindung von A nach B – mit Anfang und Ende</div>
+      <div class="word"><b>senkrecht:</b>im rechten Winkel zueinander (90°)</div>
+      <div class="word"><b>Abstand:</b>wie weit zwei Punkte voneinander entfernt sind</div>
+      <div class="word"><b>Kreisbogen:</b>ein Stück von einem Kreis, mit dem Zirkel gezeichnet</div>
+      <div class="word"><b>konstruieren:</b>mit Zirkel und Lineal zeichnen</div>
+      <div class="word"><b>Schnittpunkt:</b>der Punkt, an dem sich zwei Linien kreuzen</div>
+    </div>
+  </div>
+
+  <!-- Kasten 1 -->
+  <div style="position: relative; border: 2px solid #2F6DB5; border-radius: 8px; padding: 12px 16px 12px 22px; display: flex; flex-direction: column; gap: 8px;">
+    <div style="position: absolute; left: -12px; top: -12px; width: 24px; height: 24px; border-radius: 4px; background: #2F6DB5; color: #ffffff; font-weight: 700; font-size: 13px; display: flex; align-items: center; justify-content: center;">1</div>
+    <div style="font-size: 12.5px; font-weight: 700; color: #2F6DB5; letter-spacing: 0.4px;">DIE MITTELSENKRECHTE</div>
+    <div style="display: flex; gap: 20px; align-items: center;">
+      <svg width="230" height="140" viewBox="0 0 230 140" role="img" aria-label="Strecke AB mit der Mittelsenkrechten m durch die Mitte M. Ein Punkt P auf m hat zu A und zu B den gleichen Abstand.">
+        <line x1="115" y1="6" x2="115" y2="134" stroke="#2F6DB5" stroke-width="2"></line>
+        <line x1="30" y1="105" x2="200" y2="105" stroke="#1a1a1a" stroke-width="1.8"></line>
+        <line x1="30" y1="105" x2="115" y2="35" stroke="#777777" stroke-width="1.2" stroke-dasharray="4 3"></line>
+        <line x1="200" y1="105" x2="115" y2="35" stroke="#777777" stroke-width="1.2" stroke-dasharray="4 3"></line>
+        <path d="M125,105 A10,10 0 0,0 115,95" fill="none" stroke="#1a1a1a" stroke-width="1.2"></path><circle cx="120" cy="100" r="1.3" fill="#1a1a1a"></circle>
+        <line x1="72" y1="100" x2="72" y2="110" stroke="#1a1a1a" stroke-width="1.4"></line>
+        <line x1="158" y1="100" x2="158" y2="110" stroke="#1a1a1a" stroke-width="1.4"></line>
+        <circle cx="115" cy="35" r="3.4" fill="#C05F0C"></circle>
+        <circle cx="30" cy="105" r="3" fill="#1a1a1a"></circle>
+        <circle cx="200" cy="105" r="3" fill="#1a1a1a"></circle>
+        <circle cx="115" cy="105" r="3" fill="#1a1a1a"></circle>
+        <text x="20" y="124" font-size="14" font-weight="700" fill="#1a1a1a">A</text>
+        <text x="202" y="124" font-size="14" font-weight="700" fill="#1a1a1a">B</text>
+        <text x="101" y="124" font-size="14" font-weight="700" fill="#1a1a1a">M</text>
+        <text x="124" y="22" font-size="14" font-weight="700" fill="#2F6DB5">m</text>
+        <text x="124" y="40" font-size="14" font-weight="700" fill="#C05F0C">P</text>
+      </svg>
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 8px;">
+        <p>Die <b>Mittelsenkrechte m</b> einer Strecke AB ist eine <b>Gerade</b>.</p>
+        <p>Sie geht durch die <b>Mitte M</b> der Strecke und steht <b>senkrecht (90°)</b> auf AB.</p>
+        <div style="background: #EAF1FA; border-radius: 5px; padding: 7px 12px; font-size: 13.5px;"><b>Jeder Punkt auf m</b> hat zu A und zu B den <b>gleichen Abstand</b> (gestrichelte Linien).</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Kasten 2 -->
+  <div style="position: relative; border: 2px solid #C99A06; border-radius: 8px; padding: 12px 16px 12px 22px; display: flex; flex-direction: column; gap: 8px;">
+    <div style="position: absolute; left: -12px; top: -12px; width: 24px; height: 24px; border-radius: 4px; background: #C99A06; color: #ffffff; font-weight: 700; font-size: 13px; display: flex; align-items: center; justify-content: center;">2</div>
+    <div style="font-size: 12.5px; font-weight: 700; color: #9A7500; letter-spacing: 0.4px;">DIE MITTELSENKRECHTE KONSTRUIEREN</div>
+    <div style="display: flex; gap: 20px; align-items: center;">
+      <svg width="230" height="170" viewBox="0 0 230 170" role="img" aria-label="Konstruktion: Zwei Kreisbögen um A und B mit gleichem Radius schneiden sich in S und T. Die Gerade m durch S und T ist die Mittelsenkrechte.">
+        <path d="M104.3,8.4 A100,100 0 0,1 104.3,161.6" fill="none" stroke="#9A7500" stroke-width="1.4"></path>
+        <path d="M125.7,8.4 A100,100 0 0,0 125.7,161.6" fill="none" stroke="#9A7500" stroke-width="1.4"></path>
+        <line x1="115" y1="3" x2="115" y2="167" stroke="#2F6DB5" stroke-width="2"></line>
+        <line x1="40" y1="85" x2="190" y2="85" stroke="#1a1a1a" stroke-width="1.8"></line>
+        <path d="M125,85 A10,10 0 0,0 115,75" fill="none" stroke="#1a1a1a" stroke-width="1.2"></path><circle cx="120" cy="80" r="1.3" fill="#1a1a1a"></circle>
+        <circle cx="40" cy="85" r="3" fill="#1a1a1a"></circle>
+        <circle cx="190" cy="85" r="3" fill="#1a1a1a"></circle>
+        <circle cx="115" cy="19" r="3.4" fill="#C05F0C"></circle>
+        <circle cx="115" cy="151" r="3.4" fill="#C05F0C"></circle>
+        <text x="28" y="102" font-size="14" font-weight="700" fill="#1a1a1a">A</text>
+        <text x="192" y="102" font-size="14" font-weight="700" fill="#1a1a1a">B</text>
+        <text x="124" y="27" font-size="14" font-weight="700" fill="#C05F0C">S</text>
+        <text x="124" y="159" font-size="14" font-weight="700" fill="#C05F0C">T</text>
+        <text x="94" y="50" font-size="14" font-weight="700" fill="#2F6DB5">m</text>
+      </svg>
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 7px;">
+        <div class="step"><div class="sn" style="background: #9A7500;">1</div><div>Zeichne eine Strecke AB. Zirkel in <b>A</b> einstechen, <b>Kreisbogen</b> zeichnen. Der Radius muss <b>größer als die Hälfte</b> von AB sein.</div></div>
+        <div class="step"><div class="sn" style="background: #9A7500;">2</div><div>Zirkel in <b>B</b> einstechen, <b>gleicher Radius</b>, zweiter Kreisbogen.</div></div>
+        <div class="step"><div class="sn" style="background: #9A7500;">3</div><div>Die Kreisbögen schneiden sich in zwei Punkten: <b>S</b> und <b>T</b>.</div></div>
+        <div class="step"><div class="sn" style="background: #9A7500;">4</div><div>Zeichne die Gerade <b>m</b> durch S und T. Das ist die <b>Mittelsenkrechte</b>.</div></div>
+      </div>
+    </div>
+    <div style="background: #FBF4DD; border-radius: 5px; padding: 7px 12px; font-size: 13px;"><b>Wichtig:</b> Den Radius am Zirkel <b>nicht verstellen</b>, bis beide Kreisbögen gezeichnet sind.</div>
+  </div>
+
+  <!-- Kasten 3 -->
+  <div style="position: relative; border: 2px solid #2E7D32; border-radius: 8px; padding: 12px 16px 12px 22px; display: flex; flex-direction: column; gap: 8px;">
+    <div style="position: absolute; left: -12px; top: -12px; width: 24px; height: 24px; border-radius: 4px; background: #2E7D32; color: #ffffff; font-weight: 700; font-size: 13px; display: flex; align-items: center; justify-content: center;">3</div>
+    <div style="font-size: 12.5px; font-weight: 700; color: #2E7D32; letter-spacing: 0.4px;">DER UMKREIS EINES DREIECKS</div>
+    <div style="display: flex; gap: 20px; align-items: center;">
+      <svg width="170" height="170" viewBox="0 0 170 170" role="img" aria-label="Dreieck ABC mit den drei Mittelsenkrechten, die sich im Punkt M schneiden, und dem Umkreis um M durch A, B und C.">
+        <circle cx="85" cy="85" r="69.8" fill="#EEF7EE" stroke="#2E7D32" stroke-width="1.8"></circle>
+        <line x1="89.5" y1="7.3" x2="80.5" y2="162.6" stroke="#2F6DB5" stroke-width="1.3"></line>
+        <line x1="27.5" y1="137.4" x2="142.4" y2="32.5" stroke="#2F6DB5" stroke-width="1.3"></line>
+        <line x1="26.3" y1="33.9" x2="143.7" y2="136" stroke="#2F6DB5" stroke-width="1.3"></line>
+        <polygon points="15.3,89 153.7,97 79.3,15.4" fill="none" stroke="#1a1a1a" stroke-width="1.8" stroke-linejoin="round"></polygon>
+        <circle cx="85" cy="85" r="3.4" fill="#C62828"></circle>
+        <text x="90" y="80" font-size="14" font-weight="700" fill="#C62828">M</text>
+        <text x="3" y="104" font-size="14" font-weight="700" fill="#1a1a1a">A</text>
+        <text x="153" y="116" font-size="14" font-weight="700" fill="#1a1a1a">B</text>
+        <text x="96" y="12" font-size="14" font-weight="700" fill="#1a1a1a">C</text>
+      </svg>
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 7px;">
+        <p>Die <b>drei Mittelsenkrechten</b> der drei Seiten eines Dreiecks schneiden sich immer in <b>einem Punkt M</b>.</p>
+        <p>M hat zu A, B und C den <b>gleichen Abstand</b>. Der Kreis um M durch A, B und C heißt <b>Umkreis</b>.</p>
+        <div style="background: #EEF7EE; border-radius: 5px; padding: 7px 12px; font-size: 13px; display: flex; flex-direction: column; gap: 3px;">
+          <div><b>So zeichnest du den Umkreis:</b></div>
+          <div>① Mittelsenkrechten von <b>zwei</b> Seiten konstruieren – die dritte kannst du zur Kontrolle zeichnen.</div>
+          <div>② Ihr Schnittpunkt ist <b>M</b>.</div>
+          <div>③ Zirkel in M einstechen, bis zu A aufziehen, <b>Kreis</b> zeichnen.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div></div></div></div>
+<div class="sh"><h3 id="p2title">Seite 2 · Arbeitsplan</h3>
+<div class="sheetwrap" data-sheet id="w-orange"><style>#t4orange .grid{display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 8px;}
+#t4orange .tile{position: relative; box-sizing: border-box; border: 2px solid; border-radius: 8px; padding: 8px 4px 9px 4px; text-align: center; background: #ffffff; display: flex; flex-direction: column; align-items: center;}
+#t4orange .to{border-color: #E07B1F;}
+#t4orange .tp{border-color: #C2185B;}
+#t4orange .num{font-size: 32px; font-weight: 700; line-height: 1.05; margin-top: 4px;}
+#t4orange .no{color: #C05F0C;}
+#t4orange .np{color: #C2185B;}
+#t4orange .lab{font-size: 11.5px; line-height: 1.25; min-height: 43px; display: flex; align-items: center; justify-content: center; margin: 3px 0 6px 0;}
+#t4orange .chk{display: flex; gap: 5px;}
+#t4orange .cb{display: block; width: 18px; height: 18px; box-sizing: border-box; border: 1.5px solid #8A8A8A; border-radius: 3px;}
+#t4orange .step{display: flex; gap: 8px; align-items: center; border: 1.5px solid #D6D6D6; border-radius: 8px; padding: 8px 10px; font-size: 12.5px; line-height: 1.3;}
+#t4orange .sn{flex: none; width: 22px; height: 22px; border-radius: 50%; background: #333333; color: #ffffff; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center;}
+#t4orange .sub{display: flex; align-items: baseline; gap: 8px; margin: 2px 0 8px 0; font-size: 13.5px; font-weight: 700;}
+#t4orange .sub span{font-size: 12px; font-weight: 400; color: #666666;}</style><div id="t4orange" class="sheet" style="font-family:Arial,Helvetica,sans-serif;color:#1a1a1a"><div style="width: 794px; height: 1123px; box-sizing: border-box; padding: 40px 48px 36px 48px; display: flex; flex-direction: column; gap: 14px; background: #ffffff;">
+
+  <!-- Kopf -->
+  <div style="display: flex; flex-direction: column; gap: 8px;">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+      <div style="background: #E07B1F; color: #ffffff; font-size: 11px; font-weight: 700; letter-spacing: 0.6px; padding: 5px 16px 5px 12px; clip-path: polygon(0 0, 100% 0, calc(100% - 10px) 100%, 0 100%);">ARBEITSPLAN</div>
+      <div style="font-size: 12.5px; padding-top: 4px;">Name: ______________________ &nbsp;&nbsp; Datum: ____________</div>
+    </div>
+    <h1 style="margin: 0; font-size: 23px; font-weight: 700;">Arbeitsplan: Mittelsenkrechte und Umkreis</h1>
+    <div style="font-size: 12px; color: #555555;">Mathe · Jahrgang 8 · Grundkurs · Buch S. 56–59</div>
+  </div>
+
+  <!-- Überblick -->
+  <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px;">
+    <div class="step"><div class="sn">1</div><div><b>Start:</b> Lies die Vorderseite. Schau dir dann Buch S. 56 an.</div></div>
+    <div class="step"><div class="sn">2</div><div><b>Grundlagen</b> – das machen alle.</div></div>
+    <div class="step"><div class="sn">3</div><div><b>Zusatz</b> – danach übst du weiter.</div></div>
+  </div>
+
+  <div style="background: #F3F3F1; border-radius: 6px; padding: 9px 14px; font-size: 13px; line-height: 1.5;">
+    <b>Das brauchst du:</b> Zirkel, Lineal, Geodreieck, einen <b>spitzen</b> Bleistift.
+  </div>
+
+  <div style="font-size: 12px; color: #444444; margin-top: -4px;">1. Kästchen: <b>✓</b> = erledigt &nbsp;&nbsp;·&nbsp;&nbsp; 2. Kästchen: <b>✓</b> = kontrolliert &nbsp;&nbsp;(dann sind es zwei Häkchen: <b>✓✓</b>)</div>
+
+  <!-- Pflicht -->
+  <div style="border: 2px solid #E07B1F; border-radius: 10px; overflow: hidden;">
+    <div style="background: #E07B1F; color: #ffffff; padding: 8px 14px; display: flex; justify-content: space-between; align-items: baseline;">
+      <div style="font-size: 15px; font-weight: 700; letter-spacing: 0.5px;">GRUNDLAGEN</div>
+      <div style="font-size: 12.5px;">Buch S. 58</div>
+    </div>
+    <div style="padding: 10px 12px 12px 12px;">
+      <div class="sub">Grundlagen – alle 4 Aufgaben<span>der Reihe nach</span></div>
+      <div class="grid">
+        <div class="tile to"><div class="num no">1</div><div class="lab">Ist m die Mittelsenkrechte?</div><div class="chk"><i class="cb"></i><i class="cb"></i></div></div>
+        <div class="tile to"><div class="num no">2</div><div class="lab">Mittelsenkrechte konstruieren</div><div class="chk"><i class="cb"></i><i class="cb"></i></div></div>
+        <div class="tile to"><div class="num no">3</div><div class="lab">Blatt falten und erklären</div><div class="chk"><i class="cb"></i><i class="cb"></i></div></div>
+        <div class="tile to"><div class="num no">4</div><div class="lab">Dreieck: Umkreis zeichnen</div><div class="chk"><i class="cb"></i><i class="cb"></i></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bonus -->
+  <div style="border: 2px solid #4B5563; border-radius: 10px; overflow: hidden;">
+    <div style="background: #4B5563; color: #ffffff; padding: 8px 14px; display: flex; justify-content: space-between; align-items: baseline;">
+      <div style="font-size: 15px; font-weight: 700; letter-spacing: 0.5px;">ZUSATZ</div>
+      <div style="font-size: 12.5px;">zum Weiterüben</div>
+    </div>
+    <div style="padding: 10px 12px 12px 12px; display: flex; flex-direction: column; gap: 12px;">
+      <div>
+        <div class="sub" style="color: #C2185B;">Weiter mit Pink – Buch S. 59<span>zum Üben</span></div>
+        <div class="grid">
+          <div class="tile tp"><div class="num np">1</div><div class="lab">Wien – Paris: gleich weit (nur a und b)</div><div class="chk"><i class="cb"></i><i class="cb"></i></div></div>
+          <div class="tile tp"><div class="num np">2</div><div class="lab">Mittelsenkrechte von 3 Strecken</div><div class="chk"><i class="cb"></i><i class="cb"></i></div></div>
+          <div class="tile tp"><div class="num np">4</div><div class="lab">Umkreis von 2 Dreiecken</div><div class="chk"><i class="cb"></i><i class="cb"></i></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hilfe -->
+  <div style="border: 2px solid #444444; border-radius: 8px; padding: 12px 16px; font-size: 13px; line-height: 1.55;">
+    <div style="font-weight: 700; font-size: 14px; margin-bottom: 4px;">Ich komme nicht weiter – was mache ich?</div>
+    <div>1. Ich lese die Aufgabe noch einmal gründlich durch.</div>
+    <div>2. Ich schaue auf die Vorderseite (Kasten 2: Konstruieren, Kasten 3: Umkreis).</div>
+    <div>3. Ich prüfe: Ist der Zirkel fest? Habe ich den Radius nicht verstellt?</div>
+    <div>4. Ich frage meine Nachbarin oder meinen Nachbarn – im Flüsterton.</div>
+    <div>5. Ich frage die Lehrkraft.</div>
+    <div style="margin-top: 6px; font-size: 12px; color: #333333;">Lösungen nutze ich erst <b>nach</b> der Aufgabe – zum Kontrollieren.</div>
+  </div>
+
+</div></div></div>
+<div class="sheetwrap" data-sheet id="w-foerder" hidden><style>#t4foerder .grid{display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 8px;}
+#t4foerder .tile{position: relative; box-sizing: border-box; border: 2px solid; border-radius: 8px; padding: 8px 4px 9px 4px; text-align: center; background: #ffffff; display: flex; flex-direction: column; align-items: center;}
+#t4foerder .to{border-color: #E07B1F;}
+#t4foerder .tf{border-color: #E0AA00;}
+#t4foerder .num{font-size: 32px; font-weight: 700; line-height: 1.05; margin-top: 4px;}
+#t4foerder .no{color: #C05F0C;}
+#t4foerder .nf{color: #8A6A00;}
+#t4foerder .lab{font-size: 11.5px; line-height: 1.25; min-height: 43px; display: flex; align-items: center; justify-content: center; margin: 3px 0 6px 0;}
+#t4foerder .chk{display: flex; gap: 5px;}
+#t4foerder .pg{font-size: 10px; color: #777777; line-height: 1; margin-top: 1px;}
+#t4foerder .nf{color: #8A6A00;}
+#t4foerder .tf{border-color: #E0AA00;}
+#t4foerder .cb{display: flex; align-items: center; justify-content: center; font-style: normal; font-size: 11px; color: #C4C4C4; width: 18px; height: 18px; box-sizing: border-box; border: 1.5px solid #8A8A8A; border-radius: 3px;}
+#t4foerder .dots{position: absolute; top: 4px; right: 4px; display: flex; gap: 2px;}
+#t4foerder .dot{width: 16px; height: 16px; border-radius: 50%; color: #ffffff; font-size: 10px; font-weight: 700; display: flex; align-items: center; justify-content: center;}
+#t4foerder .d1{background: #2F6DB5;}
+#t4foerder .d2{background: #9A7500;}
+#t4foerder .step{display: flex; gap: 8px; align-items: center; border: 1.5px solid #D6D6D6; border-radius: 8px; padding: 8px 10px; font-size: 12.5px; line-height: 1.3;}
+#t4foerder .sn{flex: none; width: 22px; height: 22px; border-radius: 50%; background: #333333; color: #ffffff; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center;}
+#t4foerder .sub{display: flex; align-items: baseline; gap: 8px; margin: 2px 0 8px 0; font-size: 13.5px; font-weight: 700;}
+#t4foerder .sub span{font-size: 12px; font-weight: 400; color: #666666;}</style><div id="t4foerder" class="sheet" style="font-family:Arial,Helvetica,sans-serif;color:#1a1a1a"><div style="width: 794px; height: 1123px; box-sizing: border-box; padding: 40px 48px 36px 48px; display: flex; flex-direction: column; gap: 14px; background: #ffffff;">
+
+  <!-- Kopf -->
+  <div style="display: flex; flex-direction: column; gap: 8px;">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+      <div style="background: #E07B1F; color: #ffffff; font-size: 11px; font-weight: 700; letter-spacing: 0.6px; padding: 5px 16px 5px 12px; clip-path: polygon(0 0, 100% 0, calc(100% - 10px) 100%, 0 100%);">ARBEITSPLAN</div>
+      <div style="font-size: 12.5px; padding-top: 4px;">Name: ______________________ &nbsp;&nbsp; Datum: ____________</div>
+    </div>
+    <h1 style="margin: 0; font-size: 23px; font-weight: 700;">Arbeitsplan: Mittelsenkrechte und Umkreis</h1>
+    <div style="font-size: 12px; color: #555555;">Mathe · Jahrgang 8 · Grundkurs · Förderheft S. 32–34 · Buch S. 58</div>
+  </div>
+
+  <!-- Überblick -->
+  <div style="background: #F3F3F1; border-radius: 6px; padding: 10px 14px; font-size: 13.5px; line-height: 1.5;">
+    <b>Start:</b> Lies die Vorderseite genau durch.<br>
+    Du arbeitest im <b>Förderheft</b> (Block A). Wenn du dich sicher fühlst, darfst du <b>jederzeit</b> ins <b>Buch</b> wechseln (Block B).<br>
+    <b>Das brauchst du:</b> Zirkel, Lineal, Geodreieck, einen <b>spitzen</b> Bleistift.
+  </div>
+
+  <div style="font-size: 12px; line-height: 1.5; color: #333333;">
+    1. Kästchen: <b>✓</b> = erledigt &nbsp;&nbsp;·&nbsp;&nbsp; 2. Kästchen: <b>✓</b> = kontrolliert &nbsp;&nbsp;(dann sind es zwei Häkchen: <b>✓✓</b>)</div>
+
+  <!-- Block A -->
+  <div style="border: 2px solid #E0AA00; border-radius: 10px; overflow: hidden;">
+    <div style="background: #F2C230; color: #3A2E00; padding: 8px 14px; display: flex; justify-content: space-between; align-items: baseline;">
+      <div style="font-size: 15px; font-weight: 700; letter-spacing: 0.5px;">A · FÖRDERHEFT</div>
+      <div style="font-size: 12.5px;">Seite 32–34</div>
+    </div>
+    <div style="padding: 10px 12px 12px 12px;">
+      <div class="sub" style="color: #7A5C00;">Alle 3 Aufgaben<span>der Reihe nach · Die Schritte stehen auf Förderheft S. 32</span></div>
+      <div class="grid">
+        <div class="tile tf"><div class="pg">S. 32</div><div class="num nf">1</div><div class="lab">Mittelsenkrechte auf Strecken</div><div class="chk"><i class="cb"></i><i class="cb"></i></div></div>
+        <div class="tile tf"><div class="pg">S. 33</div><div class="num nf">2</div><div class="lab">Im Dreieck: Mittelsenkrechten</div><div class="chk"><i class="cb"></i><i class="cb"></i></div></div>
+        <div class="tile tf"><div class="pg">S. 34</div><div class="num nf">3</div><div class="lab">Mittelsenkrechten und Umkreis</div><div class="chk"><i class="cb"></i><i class="cb"></i></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Block B -->
+  <div style="border: 2px solid #E07B1F; border-radius: 10px; overflow: hidden;">
+    <div style="background: #E07B1F; color: #ffffff; padding: 8px 14px; display: flex; justify-content: space-between; align-items: baseline;">
+      <div style="font-size: 15px; font-weight: 700; letter-spacing: 0.5px;">B · BUCH (ORANGE)</div>
+      <div style="font-size: 12.5px;">Seite 58 · wenn du dich sicher fühlst</div>
+    </div>
+    <div style="padding: 10px 12px 12px 12px;">
+      <div class="grid">
+        <div class="tile to"><div class="pg">S. 58</div><div class="num no">1</div><div class="lab">Ist m die Mittelsenkrechte?</div><div class="chk"><i class="cb"></i><i class="cb"></i></div></div>
+        <div class="tile to"><div class="pg">S. 58</div><div class="num no">2</div><div class="lab">Mittelsenkrechte konstruieren</div><div class="chk"><i class="cb"></i><i class="cb"></i></div></div>
+        <div class="tile to"><div class="pg">S. 58</div><div class="num no">4</div><div class="lab">Dreieck: Umkreis zeichnen</div><div class="chk"><i class="cb"></i><i class="cb"></i></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hilfe -->
+  <div style="border: 2px solid #444444; border-radius: 8px; padding: 12px 16px; font-size: 13px; line-height: 1.55;">
+    <div style="font-weight: 700; font-size: 14px; margin-bottom: 4px;">Ich komme nicht weiter – was mache ich?</div>
+    <div>1. Ich lese die Aufgabe noch einmal gründlich durch.</div>
+    <div>2. Ich schaue auf die Vorderseite (Kasten 2: Konstruieren, Kasten 3: Umkreis).</div>
+    <div>3. Ich prüfe: Ist der Zirkel fest? Habe ich den Radius nicht verstellt?</div>
+    <div>4. Ich frage meine Nachbarin oder meinen Nachbarn – im Flüsterton.</div>
+    <div>5. Ich frage die Lehrkraft.</div>
+    <div style="margin-top: 6px; font-size: 12px; color: #333333;">Lösungen nutze ich erst <b>nach</b> der Aufgabe – zum Kontrollieren.</div>
+  </div>
+
+</div></div></div>
+</div>
+</div>
+</section>
+</main>
+</div>
+<script>
+(function(){
+var HASF=true,N=4,weg='orange',SLUG='4-mittelsenkrechte-und-umkreis',FNAME='Mittelsenkrechte_und_Umkreis';
+function fit(){document.querySelectorAll('[data-sheet]').forEach(function(w){if(w.hidden||w.offsetParent===null)return;var s=w.querySelector('.sheet'),k=w.clientWidth/794;if(!k)return;s.style.transform='scale('+k+')';w.style.height=(1123*k)+'px'})}
+window.addEventListener('resize',fit);
+if(window.ResizeObserver)new ResizeObserver(fit).observe(document.querySelector('.sheets'));
+function route(){var p=location.hash==='#arbeitsplan';
+document.getElementById('anim').hidden=p;document.getElementById('plan').hidden=!p;
+var e=document.getElementById('tab-e'),a=document.getElementById('tab-a');
+if(p){a.setAttribute('aria-current','page');e.removeAttribute('aria-current')}else{e.setAttribute('aria-current','page');a.removeAttribute('aria-current')}
+fit();setTimeout(fit,60);window.scrollTo(0,0)}
+window.addEventListener('hashchange',route);route();
+if(HASF){
+var seg=document.getElementById('weg');seg.hidden=false;
+seg.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;weg=b.dataset.w;
+seg.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});
+document.getElementById('w-orange').hidden=weg!=='orange';document.getElementById('w-foerder').hidden=weg!=='foerder';
+document.getElementById('pdflink').href='pdf/'+SLUG+(weg==='orange'?'':'-foerderweg')+'.pdf';
+document.getElementById('p2title').textContent='Seite 2 · Arbeitsplan ('+(weg==='orange'?'Orange Weg':'Förderweg')+')';
+fit()})}
+/* PDF: wenn das Speichern im Viewer erlaubt ist, als Button; sonst nur der Link */
+var sv=document.getElementById('pdfsave'),lk=document.getElementById('pdflink'),msg=document.getElementById('pdfmsg');
+lk.hidden=false;
+(async function(){try{var d=window.claude&&await claude.use('downloads');if(!d)return;sv.hidden=false;lk.hidden=true;
+sv.addEventListener('click',async function(){msg.textContent='';
+try{var r=await fetch('pdf/'+SLUG+(weg==='orange'?'':'-foerderweg')+'.pdf');if(!r.ok)throw 0;var bl=await r.blob();
+await d.save({filename:'Arbeitsplan_'+FNAME+(weg==='orange'?'':'_Foerderweg')+'.pdf',data:bl});msg.textContent='Gespeichert. Jetzt ausdrucken.'}
+catch(e){msg.textContent=(e&&e.code==='declined')?'Abgebrochen.':'Das Speichern hat nicht geklappt. Bitte frag deine Lehrkraft nach dem Blatt.'}})}catch(e){}})();
+})();
+</script>
+<script src="anim.js"></script><script src="scenes-4.js"></script><script src="anim-ui.js"></script>
+<script src="pen.js"></script>
+</body>
+</html>
