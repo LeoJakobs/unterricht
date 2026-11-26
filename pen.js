@@ -659,7 +659,8 @@ tafel.addEventListener('touchmove',function(e){if(!e.target.closest('#pz-thead')
 var fsDoc=document.documentElement,usedFs=false;
 function fsEl(){return document.fullscreenElement||document.webkitFullscreenElement}
 /* tatsächlich sichtbare Höhe (iPad-Web-App, Safari-Leisten) statt 100vh */
-function setVH(){var h=(window.visualViewport&&!(visualViewport.scale>1.02))?visualViewport.height:innerHeight;document.documentElement.style.setProperty('--pz-vh',h+'px')}
+/* beim Zoomen mit zwei Fingern nicht nachführen, sonst schrumpft das Blatt gegen den Zoom */
+function setVH(){var vv=window.visualViewport;if(vv&&vv.scale>1.02)return;var h=vv?vv.height:innerHeight;document.documentElement.style.setProperty('--pz-vh',h+'px')}
 addEventListener('resize',setVH);if(window.visualViewport)visualViewport.addEventListener('resize',setVH);setVH();
 function setPres(on){if(on===st.pres)return;st.pres=on;document.body.classList.toggle('pz-pres',on);setVH();
  if(on&&!document.getElementById('pz-back')){var bk=document.querySelector('a.back');if(bk){var a=document.createElement('a');a.id='pz-back';a.href=bk.getAttribute('href');a.textContent=bk.textContent.trim()||'← Zurück';document.body.appendChild(a)}}
