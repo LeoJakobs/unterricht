@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>1 Brüche erweitern und kürzen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero"><div class="wrap"><div>
+<a class="back" href="index.html">← Alle Themen</a>
+<div class="eyebrow"><span class="numchip">1</span><span>Brüche · Mathe 6</span></div>
+<h1>Brüche erweitern und kürzen</h1><p>Feiner und gröber einteilen · Buch S. 30–33</p></div>
+<svg viewBox="0 0 180 160" aria-hidden="true" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><rect x="14" y="22" width="152" height="34" rx="3" stroke-width="3"/><path d="M64.7 22v34M115.3 22v34" stroke-width="3"/><rect x="16" y="24" width="98" height="30" fill="#fff" fill-opacity=".28" stroke="none"/><rect x="14" y="98" width="152" height="34" rx="3" stroke-width="3"/><path d="M39.3 98v34M64.7 98v34M90 98v34M115.3 98v34M140.7 98v34" stroke-width="3" stroke-dasharray="3 5"/><rect x="16" y="100" width="98" height="30" fill="#fff" fill-opacity=".28" stroke="none"/><path d="M78 66v22M102 66v22" stroke-width="3" opacity=".8"/></svg>
+</div></header>
+<div class="wrap">
+<nav class="jump" aria-label="Ansicht"><a href="#erklaerung" id="tab-e">Erklärung</a><a href="#arbeitsplan" id="tab-a">Arbeitsplan</a></nav>
+<main>
+<section class="sec" id="anim" style="margin-top:0">
+<div class="seg" id="scnbtns" role="group" aria-label="Teil der Erklärung"></div>
+<div class="paper">
+<svg id="sv" viewBox="0 0 1000 640" role="img" aria-label="Animierte Erklärung">
+<defs><pattern id="g" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#c9dcec" stroke-width="1"/></pattern></defs>
+<rect width="1000" height="640" fill="url(#g)"/>
+<line x1="620" y1="0" x2="620" y2="640" stroke="#e4a2a2" stroke-width="1.5"/>
+<g id="tools"></g><g id="ink"></g><g id="txt"></g><g id="over"></g>
+</svg>
+</div>
+<div class="bar">
+<button class="pri" id="play">Alles abspielen</button>
+<button id="next">Nächster Schritt</button>
+<button id="reset">Neu starten</button>
+<button id="voice" aria-pressed="true">Vorlesen: an</button>
+<select id="spd" aria-label="Tempo"><option value="2.6">Langsam</option><option value="1.8" selected>Normal</option><option value="1">Schnell</option></select>
+<span class="prog" id="prog" aria-live="polite"></span>
+</div>
+<p class="hint">Mit Leertaste, Pfeil nach rechts oder einem Presenter geht es Schritt für Schritt weiter.</p>
+</section>
+
+<section class="sec" id="plan" style="margin-top:0" hidden>
+<div class="seg" id="weg" role="group" aria-label="Weg wählen">
+<button type="button" data-w="orange" aria-pressed="true">Orange/Pink</button>
+<button type="button" data-w="foerder" aria-pressed="false">Förderweg</button>
+</div>
+<div class="pdfrow">
+<button type="button" class="pdf" id="pdfsave" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 11l5 5 5-5"/><path d="M5 21h14"/></svg>PDF speichern</button>
+<a class="pdf alt" id="pdflink" href="pdf/thema1-orange.pdf" target="_blank" rel="noopener" hidden>PDF in neuem Tab öffnen</a>
+<span class="hint" id="pdfmsg" role="status" style="margin:0"></span>
+</div>
+<div class="sheets" id="w-orange"><div class="sh"><h3>Seite 1 · Erklärungen</h3><div class="sheetwrap" data-sheet ><style>#t1orange0 a{color:#2f6fd6}
+#t1orange0 a:hover{color:#1d4fa3}
+#t1orange0 .fr{display:inline-flex;flex-direction:column;align-items:center;vertical-align:middle;margin:0 2px;line-height:1.05}
+#t1orange0 .fr > span:first-child{border-bottom:1.4px solid currentColor;padding:0 3px 1px}
+#t1orange0 .fr > span:last-child{padding:1px 3px 0}
+#t1orange0 .big .fr{font-size:13pt}</style><div id="t1orange0" class="sheet"><div style="width: 794px; height: 1123px; box-sizing: border-box; padding: 42px 49px; background: #ffffff; color: #1a1a1a; font-family: Arial, 'Liberation Sans', Helvetica, sans-serif; font-size: 10.5pt; line-height: 1.38; overflow: hidden">
+
+  <div style="display: flex; justify-content: space-between; align-items: flex-start">
+    <span style="display: inline-block; background: #2e7d32; color: #ffffff; font-weight: 700; font-size: 8pt; letter-spacing: 0.08em; padding: 5px 16px 5px 10px; clip-path: polygon(0 0, 100% 0, 92% 100%, 0 100%)">ERKLÄRUNGEN</span>
+    <span style="font-size: 8.5pt; color: #666666; margin-top: 4px">Name: ______________________</span>
+  </div>
+  <h1 style="font-size: 19pt; margin: 8px 0 2px">Brüche erweitern und kürzen – so geht's!</h1>
+  <p style="color: #666666; font-size: 8.5pt; margin: 0 0 12px">Mathe · Jahrgang 6 · Buch S. 30–33</p>
+
+  <div style="background: #eef6ee; border: 1px solid #cfe3cf; border-radius: 6px; padding: 8px 14px 9px; margin-bottom: 14px">
+    <h3 style="font-size: 8.5pt; letter-spacing: 0.05em; margin: 0 0 6px; color: #2e7d32">WICHTIGE WÖRTER</h3>
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px 24px; font-size: 9.5pt">
+      <div><b style="display: block">Zähler (oben):</b>wie viele Teile du hast</div>
+      <div><b style="display: block">Erweitern:</b>das Ganze <u>feiner</u> einteilen → <u>mehr</u> Teile</div>
+      <div><b style="display: block">Nenner (unten):</b>in wie viele Teile das Ganze geteilt ist</div>
+      <div><b style="display: block">Kürzen:</b>das Ganze <u>gröber</u> einteilen → <u>weniger</u> Teile</div>
+    </div>
+  </div>
+
+  <div style="position: relative; border: 2px solid #2f6fd6; border-radius: 8px; padding: 16px 16px 12px; margin: 0 0 20px">
+    <div style="position: absolute; top: -12px; left: 12px; width: 22px; height: 22px; border-radius: 4px; background: #2f6fd6; color: #ffffff; font-weight: 700; font-size: 10pt; display: flex; align-items: center; justify-content: center">1</div>
+    <h3 style="font-size: 8.5pt; letter-spacing: 0.05em; margin: 0 0 6px; color: #2f6fd6">ERWEITERN: FEINER EINTEILEN</h3>
+    <div style="display: flex; gap: 16px; align-items: center">
+      <div style="flex: 0 0 245px; text-align: center">
+        <svg width="240" height="66" viewBox="0 0 240 66" aria-hidden="true">
+          <rect x="2" y="4" width="45" height="56" fill="#9cc0ee"></rect><rect x="47" y="4" width="45" height="56" fill="#ffffff"></rect>
+          <rect x="2" y="4" width="90" height="56" fill="none" stroke="#222222" stroke-width="2"></rect>
+          <line x1="47" y1="4" x2="47" y2="60" stroke="#222222" stroke-width="2"></line>
+          <text x="120" y="38" font-size="20" text-anchor="middle" font-family="Arial">→</text>
+          <text x="120" y="20" font-size="11" text-anchor="middle" font-family="Arial" font-weight="bold" fill="#2f6fd6">· 2</text>
+          <rect x="148" y="4" width="45" height="56" fill="#9cc0ee"></rect><rect x="193" y="4" width="45" height="56" fill="#ffffff"></rect>
+          <line x1="170.5" y1="4" x2="170.5" y2="60" stroke="#2f6fd6" stroke-width="2"></line>
+          <line x1="215.5" y1="4" x2="215.5" y2="60" stroke="#2f6fd6" stroke-width="2"></line>
+          <line x1="193" y1="4" x2="193" y2="60" stroke="#222222" stroke-width="2"></line>
+          <rect x="148" y="4" width="90" height="56" fill="none" stroke="#222222" stroke-width="2"></rect>
+        </svg>
+        <div class="big" style="display: grid; grid-template-columns: 92px 56px 92px; justify-items: center; width: 240px; margin: 3px auto 0; font-size: 11pt"><span class="fr"><span>1</span><span>2</span></span><span></span><span class="fr"><span>2</span><span>4</span></span></div>
+      </div>
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 7px">
+        <div style="background: #e8f0fc; border-radius: 5px; padding: 6px 11px; font-size: 9.8pt">Du zerschneidest <b>jedes Stück</b> in gleich viele kleinere Stücke.<br>→ Rechne <b>Zähler · Zahl</b> und <b>Nenner · Zahl</b>.</div>
+        <div style="background: #e8f4e8; border-radius: 5px; padding: 6px 11px; font-size: 9.8pt">Es sind <b>mehr Teile</b> – aber es ist <b>gleich viel</b> gefärbt.</div>
+      </div>
+    </div>
+    <div class="big" style="margin-top: 8px; font-size: 10.5pt"><span style="font-size: 8pt; font-weight: 700; color: #555555; letter-spacing: 0.05em; margin-right: 6px">BEISPIEL:</span>
+      Erweitere <span class="fr"><span>1</span><span>2</span></span> mit 3: &nbsp;
+      <span class="fr"><span>1</span><span>2</span></span> =
+      <span class="fr"><span>1 · 3</span><span>2 · 3</span></span> =
+      <span class="fr"><span><b>3</b></span><span><b>6</b></span></span>
+    </div>
+  </div>
+
+  <div style="position: relative; border: 2px solid #b58a00; border-radius: 8px; padding: 16px 16px 12px; margin: 0 0 20px">
+    <div style="position: absolute; top: -12px; left: 12px; width: 22px; height: 22px; border-radius: 4px; background: #b58a00; color: #ffffff; font-weight: 700; font-size: 10pt; display: flex; align-items: center; justify-content: center">2</div>
+    <h3 style="font-size: 8.5pt; letter-spacing: 0.05em; margin: 0 0 6px; color: #8a6a00">KÜRZEN: GRÖBER EINTEILEN</h3>
+    <div style="display: flex; gap: 16px; align-items: center">
+      <div style="flex: 0 0 245px; text-align: center">
+        <svg width="240" height="66" viewBox="0 0 240 66" aria-hidden="true">
+          <g stroke="#222222" stroke-width="2">
+            <rect x="2" y="4" width="15" height="56" fill="#f2d77e"></rect><rect x="17" y="4" width="15" height="56" fill="#f2d77e"></rect>
+            <rect x="32" y="4" width="15" height="56" fill="#f2d77e"></rect><rect x="47" y="4" width="15" height="56" fill="#f2d77e"></rect>
+            <rect x="62" y="4" width="15" height="56" fill="#ffffff"></rect><rect x="77" y="4" width="15" height="56" fill="#ffffff"></rect>
+          </g>
+          <text x="120" y="38" font-size="20" text-anchor="middle" font-family="Arial">→</text>
+          <text x="120" y="20" font-size="11" text-anchor="middle" font-family="Arial" font-weight="bold" fill="#8a6a00">: 2</text>
+          <g stroke="#222222" stroke-width="2">
+            <rect x="148" y="4" width="30" height="56" fill="#f2d77e"></rect><rect x="178" y="4" width="30" height="56" fill="#f2d77e"></rect>
+            <rect x="208" y="4" width="30" height="56" fill="#ffffff"></rect>
+          </g>
+        </svg>
+        <div class="big" style="display: grid; grid-template-columns: 92px 56px 92px; justify-items: center; width: 240px; margin: 3px auto 0; font-size: 11pt"><span class="fr"><span>4</span><span>6</span></span><span></span><span class="fr"><span>2</span><span>3</span></span></div>
+      </div>
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 7px">
+        <div style="background: #faf3dc; border-radius: 5px; padding: 6px 11px; font-size: 9.8pt">Du fasst <b>immer gleich viele</b> Stücke zu einem großen Stück zusammen.<br>→ Rechne <b>Zähler : Zahl</b> und <b>Nenner : Zahl</b>.</div>
+        <div style="background: #e8f4e8; border-radius: 5px; padding: 6px 11px; font-size: 9.8pt">Es sind <b>weniger Teile</b> – aber es ist <b>gleich viel</b> gefärbt.</div>
+      </div>
+    </div>
+    <div class="big" style="margin-top: 8px; font-size: 10.5pt"><span style="font-size: 8pt; font-weight: 700; color: #555555; letter-spacing: 0.05em; margin-right: 6px">BEISPIEL:</span>
+      Kürze <span class="fr"><span>6</span><span>8</span></span> mit 2: &nbsp;
+      <span class="fr"><span>6</span><span>8</span></span> =
+      <span class="fr"><span>6 : 2</span><span>8 : 2</span></span> =
+      <span class="fr"><span><b>3</b></span><span><b>4</b></span></span>
+    </div>
+  </div>
+
+  <div style="display: flex; gap: 16px">
+    <div style="flex: 1; position: relative; border: 2px solid #2e7d32; border-radius: 8px; padding: 16px 16px 12px; margin: 0 0 20px">
+      <div style="position: absolute; top: -12px; left: 12px; width: 22px; height: 22px; border-radius: 4px; background: #2e7d32; color: #ffffff; font-weight: 700; font-size: 10pt; display: flex; align-items: center; justify-content: center">3</div>
+      <h3 style="font-size: 8.5pt; letter-spacing: 0.05em; margin: 0 0 6px; color: #2e7d32">MIT WELCHER ZAHL?</h3>
+      <div class="big" style="text-align: center; margin: 2px 0 6px">
+        <span class="fr"><span>3</span><span>4</span></span> = <span class="fr"><span>9</span><span>12</span></span>
+      </div>
+      <div style="background: #e8f4e8; border-radius: 5px; padding: 6px 11px; font-size: 9.8pt">Schau auf die Nenner: <b>4 · 3 = 12</b><br>Prüfe den Zähler: 3 · 3 = 9 ✓<br>→ <b>mit 3 erweitert</b></div>
+      <div style="font-size: 8.5pt; color: #444444; margin-top: 6px">Zahlen werden <b>größer</b> → erweitert · <b>kleiner</b> → gekürzt</div>
+    </div>
+    <div style="flex: 1; position: relative; border: 2px solid #2e7d32; border-radius: 8px; padding: 16px 16px 12px; margin: 0 0 20px">
+      <div style="position: absolute; top: -12px; left: 12px; width: 22px; height: 22px; border-radius: 4px; background: #2e7d32; color: #ffffff; font-weight: 700; font-size: 10pt; display: flex; align-items: center; justify-content: center">4</div>
+      <h3 style="font-size: 8.5pt; letter-spacing: 0.05em; margin: 0 0 6px; color: #2e7d32">SO WEIT WIE MÖGLICH KÜRZEN</h3>
+      <div class="big" style="text-align: center; margin: 2px 0 6px">
+        <span class="fr"><span>24</span><span>30</span></span>
+        <span style="font-weight: 700; color: #2e7d32">&nbsp;: 2 →&nbsp;</span>
+        <span class="fr"><span>12</span><span>15</span></span>
+        <span style="font-weight: 700; color: #2e7d32">&nbsp;: 3 →&nbsp;</span>
+        <span class="fr"><span><b>4</b></span><span><b>5</b></span></span>
+      </div>
+      <div style="background: #e8f4e8; border-radius: 5px; padding: 6px 11px; font-size: 9.8pt">Kürze immer weiter, bis <b>keine Zahl mehr</b> in Zähler <b>und</b> Nenner passt.</div>
+      <div style="font-size: 8.5pt; color: #444444; margin-top: 6px">Probiere 2, 3, 5 … – die Teilbarkeitsregeln helfen!</div>
+    </div>
+  </div>
+
+  <div style="border: 2px solid #333333; border-radius: 8px; padding: 8px 16px; display: flex; gap: 26px; align-items: center; font-size: 10pt">
+    <b style="font-size: 10.5pt; letter-spacing: 0.05em">MERKE</b>
+    <span>✓ Immer <b>oben und unten</b> dasselbe rechnen</span>
+    <span>✓ Der <b>Wert</b> bleibt gleich</span>
+    <span>✓ Nie mit <b>0</b></span>
+  </div>
+</div></div></div></div><div class="sh"><h3>Seite 2 · Arbeitsplan</h3><div class="sheetwrap" data-sheet ><style>#t1orange1 a{color:#333333}
+#t1orange1 a:hover{color:#000000}
+#t1orange1 .tile{border:2px solid;border-radius:8px;text-align:center;padding:6px 3px 7px}
+#t1orange1 .tile .n{font-size:22pt;font-weight:700;line-height:1.1}
+#t1orange1 .tile .w{font-size:8.2pt;color:#444444;line-height:1.15;min-height:18px;display:flex;align-items:center;justify-content:center}
+#t1orange1 .tile .ck{display:flex;justify-content:center;gap:7px;margin-top:6px}
+#t1orange1 .tile .ck span{width:16px;height:16px;border:1.5px solid #555555;border-radius:2px;display:inline-block}
+#t1orange1 .t-or{border-color:#e07a2e}
+#t1orange1 .t-or .n{color:#c25f14}
+#t1orange1 .t-pk{border-color:#c2306f}
+#t1orange1 .t-pk .n{color:#a3205a}
+#t1orange1 .t-li{border-color:#5e3f99}
+#t1orange1 .t-li .n{color:#5e3f99}
+#t1orange1 .box{width:13px;height:13px;border:1.5px solid #555555;border-radius:2px;display:inline-block}</style><div id="t1orange1" class="sheet"><div style="width: 794px; height: 1123px; box-sizing: border-box; padding: 42px 49px; background: #ffffff; color: #1a1a1a; font-family: Arial, 'Liberation Sans', Helvetica, sans-serif; font-size: 10.5pt; line-height: 1.38; overflow: hidden">
+
+  <div style="display: flex; justify-content: space-between; align-items: flex-start">
+    <span style="display: inline-block; background: #333333; color: #ffffff; font-weight: 700; font-size: 8pt; letter-spacing: 0.08em; padding: 5px 16px 5px 10px; clip-path: polygon(0 0, 100% 0, 92% 100%, 0 100%)">ARBEITSPLAN</span>
+    <span style="font-size: 8.5pt; color: #666666; margin-top: 4px">Name: ______________________ &nbsp; Klasse: _____</span>
+  </div>
+  <h1 style="font-size: 19pt; margin: 8px 0 2px">Brüche erweitern und kürzen</h1>
+  <p style="color: #666666; font-size: 8.5pt; margin: 0 0 12px">Buch S. 30–33 · ca. 3–4 Stunden · alle Aufgaben ins Heft</p>
+
+  <div style="display: flex; gap: 8px; margin: 4px 0 12px">
+    <div style="flex: 1; border: 1.5px solid #bbbbbb; border-radius: 6px; padding: 6px 8px; font-size: 9pt; display: flex; gap: 7px; align-items: center; line-height: 1.25"><span style="flex: 0 0 20px; height: 20px; border-radius: 50%; background: #333333; color: #ffffff; font-weight: 700; display: flex; align-items: center; justify-content: center">1</span><span>Wähle deinen Weg: <b style="color: #c25f14">Orange</b> oder <b style="color: #a3205a">Pink</b></span></div>
+    <div style="flex: 1; border: 1.5px solid #bbbbbb; border-radius: 6px; padding: 6px 8px; font-size: 9pt; display: flex; gap: 7px; align-items: center; line-height: 1.25"><span style="flex: 0 0 20px; height: 20px; border-radius: 50%; background: #333333; color: #ffffff; font-weight: 700; display: flex; align-items: center; justify-content: center">2</span><span><b>Basis</b> komplett – das machen alle</span></div>
+    <div style="flex: 1; border: 1.5px solid #bbbbbb; border-radius: 6px; padding: 6px 8px; font-size: 9pt; display: flex; gap: 7px; align-items: center; line-height: 1.25"><span style="flex: 0 0 20px; height: 20px; border-radius: 50%; background: #333333; color: #ffffff; font-weight: 700; display: flex; align-items: center; justify-content: center">3</span><span><b>Plus</b> – so viele du schaffst</span></div>
+    <div style="flex: 1; border: 1.5px solid #bbbbbb; border-radius: 6px; padding: 6px 8px; font-size: 9pt; display: flex; gap: 7px; align-items: center; line-height: 1.25"><span style="flex: 0 0 20px; height: 20px; border-radius: 50%; background: #333333; color: #ffffff; font-weight: 700; display: flex; align-items: center; justify-content: center">4</span><span><b>Bonus</b> – wenn du richtig schnell bist</span></div>
+  </div>
+
+  <div style="border: 2px solid #555555; border-radius: 8px; padding: 7px 14px; display: flex; align-items: center; gap: 14px; margin-bottom: 12px; font-size: 10pt">
+    <b style="letter-spacing: 0.05em">START</b>
+    <span>Für alle: Buch S. 30 – die beiden <b>▸ Aufgaben</b> im grünen Kasten</span>
+    <span style="margin-left: auto; display: flex; gap: 6px"><span class="box"></span><span class="box"></span></span>
+  </div>
+
+  <div style="font-size: 8.5pt; color: #444444; display: flex; align-items: center; gap: 6px; margin: 0 0 10px">Kästchen unter jeder Aufgabe: <span class="box"></span> links = erledigt &nbsp;·&nbsp; <span class="box"></span> rechts = kontrolliert</div>
+
+  <div style="display: flex; gap: 14px">
+    <div style="flex: 1; border: 2px solid #e07a2e; border-radius: 10px; overflow: hidden">
+      <div style="background: #e07a2e; color: #ffffff; padding: 7px 12px; font-weight: 700; font-size: 12.5pt; letter-spacing: 0.04em; display: flex; justify-content: space-between; align-items: baseline">ORANGE <small style="font-size: 9pt; font-weight: 400">Buch S. 31</small></div>
+      <div style="padding: 10px 12px 11px">
+        <div style="font-weight: 700; font-size: 10pt; letter-spacing: 0.04em">BASIS</div>
+        <div style="font-size: 8.5pt; color: #555555; margin: 0 0 8px">Pflicht – alle 4 Aufgaben</div>
+        <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px">
+          <div class="tile t-or"><div class="n">1</div><div class="w">erweitern</div><div class="ck"><span></span><span></span></div></div>
+          <div class="tile t-or"><div class="n">3</div><div class="w">kürzen</div><div class="ck"><span></span><span></span></div></div>
+          <div class="tile t-or"><div class="n">7</div><div class="w">mit welcher Zahl?</div><div class="ck"><span></span><span></span></div></div>
+          <div class="tile t-or"><div class="n">9</div><div class="w">ganz kürzen</div><div class="ck"><span></span><span></span></div></div>
+        </div>
+      </div>
+      <div style="padding: 10px 12px 11px; border-top: 1.5px dashed #c8c8c8">
+        <div style="font-weight: 700; font-size: 10pt; letter-spacing: 0.04em">PLUS</div>
+        <div style="font-size: 8.5pt; color: #555555; margin: 0 0 8px">der Reihe nach</div>
+        <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px">
+          <div class="tile t-or"><div class="n">2</div><div class="w">Bild erweitern</div><div class="ck"><span></span><span></span></div></div>
+          <div class="tile t-or"><div class="n">4</div><div class="w">Bild kürzen</div><div class="ck"><span></span><span></span></div></div>
+          <div class="tile t-or"><div class="n">5</div><div class="w">Blatt falten</div><div class="ck"><span></span><span></span></div></div>
+          <div class="tile t-or"><div class="n">6</div><div class="w">Text ergänzen</div><div class="ck"><span></span><span></span></div></div>
+          <div class="tile t-or"><div class="n">8</div><div class="w">Lücken füllen</div><div class="ck"><span></span><span></span></div></div>
+          <div class="tile t-or"><div class="n">10</div><div class="w">Wer hat recht?</div><div class="ck"><span></span><span></span></div></div>
+        </div>
+      </div>
+      <div style="padding: 10px 12px 11px; border-top: 1.5px dashed #c8c8c8">
+        <div style="font-weight: 700; font-size: 10pt; letter-spacing: 0.04em; color: #a3205a">BONUS</div>
+        <div style="font-size: 8.5pt; color: #555555; margin: 0 0 8px">weiter mit der Pink-Basis – Buch S. 32</div>
+        <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px">
+          <div class="tile t-pk"><div class="n">1</div><div class="w">erweitern</div><div class="ck"><span></span><span></span></div></div>
+          <div class="tile t-pk"><div class="n">2</div><div class="w">kürzen</div><div class="ck"><span></span><span></span></div></div>
+          <div class="tile t-pk"><div class="n">4</div><div class="w">mit welcher Zahl?</div><div class="ck"><span></span><span></span></div></div>
+          <div class="tile t-pk"><div class="n">8</div><div class="w">ganz kürzen</div><div class="ck"><span></span><span></span></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="flex: 1; border: 2px solid #c2306f; border-radius: 10px; overflow: hidden">
+      <div style="background: #c2306f; color: #ffffff; padding: 7px 12px; font-weight: 700; font-size: 12.5pt; letter-spacing: 0.04em; display: flex; justify-content: space-between; align-items: baseline">PINK <small style="font-size: 9pt; font-weight: 400">Buch S. 32</small></div>
+      <div style="padding: 10px 12px 11px">
+        <div style="font-weight: 700; font-size: 10pt; letter-spacing: 0.04em">BASIS</div>
+        <div style="font-size: 8.5pt; color: #555555; margin: 0 0 8px">Pflicht – alle 4 Aufgaben</div>
+        <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px">
+          <div class="tile t-pk"><div class="n">1</div><div class="w">erweitern</div><div class="ck"><span></span><span></span></div></div>
+          <div class="tile t-pk"><div class="n">2</div><div class="w">kürzen</div><div class="ck"><span></span><span></span></div></div>
+          <div class="tile t-pk"><div class="n">4</div><div class="w">mit welcher Zahl?</div><div class="ck"><span></span><span></span></div></div>
+          <div class="tile t-pk"><div class="n">8</div><div class="w">ganz kürzen</div><div class="ck"><span></span><span></span></div></div>
+        </div>
+      </div>
+      <div style="padding: 10px 12px 11px; border-top: 1.5px dashed #c8c8c8">
+        <div style="font-weight: 700; font-size: 10pt; letter-spacing: 0.04em">PLUS</div>
+        <div style="font-size: 8.5pt; color: #555555; margin: 0 0 8px">der Reihe nach</div>
+        <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px">
+          <div class="tile t-pk"><div class="n">3</div><div class="w">Bild deuten</div><div class="ck"><span></span><span></span></div></div>
+          <div class="tile t-pk"><div class="n">6</div><div class="w">Lösungswort</div><div class="ck"><span></span><span></span></div></div>
+          <div class="tile t-pk"><div class="n">7</div><div class="w">Lückenkette</div><div class="ck"><span></span><span></span></div></div>
+          <div class="tile t-pk"><div class="n">9</div><div class="w">gleiche Brüche</div><div class="ck"><span></span><span></span></div></div>
+          <div class="tile t-pk"><div class="n">10</div><div class="w">richtig oder falsch?</div><div class="ck"><span></span><span></span></div></div>
+        </div>
+      </div>
+      <div style="padding: 10px 12px 11px; border-top: 1.5px dashed #c8c8c8">
+        <div style="font-weight: 700; font-size: 10pt; letter-spacing: 0.04em; color: #5e3f99">BONUS</div>
+        <div style="font-size: 8.5pt; color: #555555; margin: 0 0 8px">weiter mit Lila – Buch S. 33</div>
+        <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px">
+          <div class="tile t-li"><div class="n">6</div><div class="w">Fehler finden</div><div class="ck"><span></span><span></span></div></div>
+          <div class="tile t-li"><div class="n">8</div><div class="w">gleicher Nenner</div><div class="ck"><span></span><span></span></div></div>
+          <div class="tile t-li"><div class="n">9</div><div class="w">Anteile</div><div class="ck"><span></span><span></span></div></div>
+          <div class="tile t-li"><div class="n">10</div><div class="w">Lose verkaufen</div><div class="ck"><span></span><span></span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top: 12px; border: 2px solid #555555; border-radius: 8px; padding: 8px 16px 9px; background: #f5f5f5; font-size: 9.5pt">
+    <div style="font-weight: 700; font-size: 10.5pt; margin-bottom: 3px">Ich komme nicht weiter – was mache ich?</div>
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px 24px">
+      <div>1. Ich lese die Aufgabe noch einmal <b>gründlich</b> durch.</div>
+      <div>3. Ich frage meine Nachbarin oder meinen Nachbarn – <b>im Flüsterton</b>.</div>
+      <div>2. Ich schaue auf die <b>Vorderseite</b> (Erklärungen).</div>
+      <div>4. Ich frage die <b>Lehrkraft</b>.</div>
+    </div>
+    <div style="font-size: 8.5pt; color: #444444; margin-top: 4px">Lösungen nutze ich erst <b>nach</b> der Aufgabe – zum Kontrollieren. Bei Pink 6 hilft das <b>Lösungswort</b>.</div>
+  </div>
+</div></div></div></div></div>
+<div class="sheets" id="w-foerder" hidden><div class="sh"><h3>Seite 1 · Erklärungen</h3><div class="sheetwrap" data-sheet ><style>#t1foerder0 a{color:#2f6fd6}
+#t1foerder0 a:hover{color:#1d4fa3}
+#t1foerder0 .fr{display:inline-flex;flex-direction:column;align-items:center;vertical-align:middle;margin:0 2px;line-height:1.05}
+#t1foerder0 .fr > span:first-child{border-bottom:1.4px solid currentColor;padding:0 3px 1px}
+#t1foerder0 .fr > span:last-child{padding:1px 3px 0}
+#t1foerder0 .big .fr{font-size:13pt}</style><div id="t1foerder0" class="sheet"><div style="width: 794px; height: 1123px; box-sizing: border-box; padding: 42px 49px; background: #ffffff; color: #1a1a1a; font-family: Arial, 'Liberation Sans', Helvetica, sans-serif; font-size: 10.5pt; line-height: 1.38; overflow: hidden">
+
+  <div style="display: flex; justify-content: space-between; align-items: flex-start">
+    <span style="display: inline-block; background: #2e7d32; color: #ffffff; font-weight: 700; font-size: 8pt; letter-spacing: 0.08em; padding: 5px 16px 5px 10px; clip-path: polygon(0 0, 100% 0, 92% 100%, 0 100%)">ERKLÄRUNGEN</span>
+    <span style="font-size: 8.5pt; color: #666666; margin-top: 4px">Name: ______________________</span>
+  </div>
+  <h1 style="font-size: 19pt; margin: 8px 0 2px">Brüche erweitern und kürzen – so geht's!</h1>
+  <p style="color: #666666; font-size: 8.5pt; margin: 0 0 12px">Mathe · Jahrgang 6 · Buch S. 30–33</p>
+
+  <div style="background: #eef6ee; border: 1px solid #cfe3cf; border-radius: 6px; padding: 8px 14px 9px; margin-bottom: 14px">
+    <h3 style="font-size: 8.5pt; letter-spacing: 0.05em; margin: 0 0 6px; color: #2e7d32">WICHTIGE WÖRTER</h3>
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px 24px; font-size: 9.5pt">
+      <div><b style="display: block">Zähler (oben):</b>wie viele Teile du hast</div>
+      <div><b style="display: block">Erweitern:</b>das Ganze <u>feiner</u> einteilen → <u>mehr</u> Teile</div>
+      <div><b style="display: block">Nenner (unten):</b>in wie viele Teile das Ganze geteilt ist</div>
+      <div><b style="display: block">Kürzen:</b>das Ganze <u>gröber</u> einteilen → <u>weniger</u> Teile</div>
+    </div>
+  </div>
+
+  <div style="position: relative; border: 2px solid #2f6fd6; border-radius: 8px; padding: 16px 16px 12px; margin: 0 0 20px">
+    <div style="position: absolute; top: -12px; left: 12px; width: 22px; height: 22px; border-radius: 4px; background: #2f6fd6; color: #ffffff; font-weight: 700; font-size: 10pt; display: flex; align-items: center; justify-content: center">1</div>
+    <h3 style="font-size: 8.5pt; letter-spacing: 0.05em; margin: 0 0 6px; color: #2f6fd6">ERWEITERN: FEINER EINTEILEN</h3>
+    <div style="display: flex; gap: 16px; align-items: center">
+      <div style="flex: 0 0 245px; text-align: center">
+        <svg width="240" height="66" viewBox="0 0 240 66" aria-hidden="true">
+          <rect x="2" y="4" width="45" height="56" fill="#9cc0ee"></rect><rect x="47" y="4" width="45" height="56" fill="#ffffff"></rect>
+          <rect x="2" y="4" width="90" height="56" fill="none" stroke="#222222" stroke-width="2"></rect>
+          <line x1="47" y1="4" x2="47" y2="60" stroke="#222222" stroke-width="2"></line>
+          <text x="120" y="38" font-size="20" text-anchor="middle" font-family="Arial">→</text>
+          <text x="120" y="20" font-size="11" text-anchor="middle" font-family="Arial" font-weight="bold" fill="#2f6fd6">· 2</text>
+          <rect x="148" y="4" width="45" height="56" fill="#9cc0ee"></rect><rect x="193" y="4" width="45" height="56" fill="#ffffff"></rect>
+          <line x1="170.5" y1="4" x2="170.5" y2="60" stroke="#2f6fd6" stroke-width="2"></line>
+          <line x1="215.5" y1="4" x2="215.5" y2="60" stroke="#2f6fd6" stroke-width="2"></line>
+          <line x1="193" y1="4" x2="193" y2="60" stroke="#222222" stroke-width="2"></line>
+          <rect x="148" y="4" width="90" height="56" fill="none" stroke="#222222" stroke-width="2"></rect>
+        </svg>
+        <div class="big" style="display: grid; grid-template-columns: 92px 56px 92px; justify-items: center; width: 240px; margin: 3px auto 0; font-size: 11pt"><span class="fr"><span>1</span><span>2</span></span><span></span><span class="fr"><span>2</span><span>4</span></span></div>
+      </div>
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 7px">
+        <div style="background: #e8f0fc; border-radius: 5px; padding: 6px 11px; font-size: 9.8pt">Du zerschneidest <b>jedes Stück</b> in gleich viele kleinere Stücke.<br>→ Rechne <b>Zähler · Zahl</b> und <b>Nenner · Zahl</b>.</div>
+        <div style="background: #e8f4e8; border-radius: 5px; padding: 6px 11px; font-size: 9.8pt">Es sind <b>mehr Teile</b> – aber es ist <b>gleich viel</b> gefärbt.</div>
+      </div>
+    </div>
+    <div class="big" style="margin-top: 8px; font-size: 10.5pt"><span style="font-size: 8pt; font-weight: 700; color: #555555; letter-spacing: 0.05em; margin-right: 6px">BEISPIEL:</span>
+      Erweitere <span class="fr"><span>1</span><span>2</span></span> mit 3: &nbsp;
+      <span class="fr"><span>1</span><span>2</span></span> =
+      <span class="fr"><span>1 · 3</span><span>2 · 3</span></span> =
+      <span class="fr"><span><b>3</b></span><span><b>6</b></span></span>
+    </div>
+  </div>
+
+  <div style="position: relative; border: 2px solid #b58a00; border-radius: 8px; padding: 16px 16px 12px; margin: 0 0 20px">
+    <div style="position: absolute; top: -12px; left: 12px; width: 22px; height: 22px; border-radius: 4px; background: #b58a00; color: #ffffff; font-weight: 700; font-size: 10pt; display: flex; align-items: center; justify-content: center">2</div>
+    <h3 style="font-size: 8.5pt; letter-spacing: 0.05em; margin: 0 0 6px; color: #8a6a00">KÜRZEN: GRÖBER EINTEILEN</h3>
+    <div style="display: flex; gap: 16px; align-items: center">
+      <div style="flex: 0 0 245px; text-align: center">
+        <svg width="240" height="66" viewBox="0 0 240 66" aria-hidden="true">
+          <g stroke="#222222" stroke-width="2">
+            <rect x="2" y="4" width="15" height="56" fill="#f2d77e"></rect><rect x="17" y="4" width="15" height="56" fill="#f2d77e"></rect>
+            <rect x="32" y="4" width="15" height="56" fill="#f2d77e"></rect><rect x="47" y="4" width="15" height="56" fill="#f2d77e"></rect>
+            <rect x="62" y="4" width="15" height="56" fill="#ffffff"></rect><rect x="77" y="4" width="15" height="56" fill="#ffffff"></rect>
+          </g>
+          <text x="120" y="38" font-size="20" text-anchor="middle" font-family="Arial">→</text>
+          <text x="120" y="20" font-size="11" text-anchor="middle" font-family="Arial" font-weight="bold" fill="#8a6a00">: 2</text>
+          <g stroke="#222222" stroke-width="2">
+            <rect x="148" y="4" width="30" height="56" fill="#f2d77e"></rect><rect x="178" y="4" width="30" height="56" fill="#f2d77e"></rect>
+            <rect x="208" y="4" width="30" height="56" fill="#ffffff"></rect>
+          </g>
+        </svg>
+        <div class="big" style="display: grid; grid-template-columns: 92px 56px 92px; justify-items: center; width: 240px; margin: 3px auto 0; font-size: 11pt"><span class="fr"><span>4</span><span>6</span></span><span></span><span class="fr"><span>2</span><span>3</span></span></div>
+      </div>
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 7px">
+        <div style="background: #faf3dc; border-radius: 5px; padding: 6px 11px; font-size: 9.8pt">Du fasst <b>immer gleich viele</b> Stücke zu einem großen Stück zusammen.<br>→ Rechne <b>Zähler : Zahl</b> und <b>Nenner : Zahl</b>.</div>
+        <div style="background: #e8f4e8; border-radius: 5px; padding: 6px 11px; font-size: 9.8pt">Es sind <b>weniger Teile</b> – aber es ist <b>gleich viel</b> gefärbt.</div>
+      </div>
+    </div>
+    <div class="big" style="margin-top: 8px; font-size: 10.5pt"><span style="font-size: 8pt; font-weight: 700; color: #555555; letter-spacing: 0.05em; margin-right: 6px">BEISPIEL:</span>
+      Kürze <span class="fr"><span>6</span><span>8</span></span> mit 2: &nbsp;
+      <span class="fr"><span>6</span><span>8</span></span> =
+      <span class="fr"><span>6 : 2</span><span>8 : 2</span></span> =
+      <span class="fr"><span><b>3</b></span><span><b>4</b></span></span>
+    </div>
+  </div>
+
+  <div style="display: flex; gap: 16px">
+    <div style="flex: 1; position: relative; border: 2px solid #2e7d32; border-radius: 8px; padding: 16px 16px 12px; margin: 0 0 20px">
+      <div style="position: absolute; top: -12px; left: 12px; width: 22px; height: 22px; border-radius: 4px; background: #2e7d32; color: #ffffff; font-weight: 700; font-size: 10pt; display: flex; align-items: center; justify-content: center">3</div>
+      <h3 style="font-size: 8.5pt; letter-spacing: 0.05em; margin: 0 0 6px; color: #2e7d32">MIT WELCHER ZAHL?</h3>
+      <div class="big" style="text-align: center; margin: 2px 0 6px">
+        <span class="fr"><span>3</span><span>4</span></span> = <span class="fr"><span>9</span><span>12</span></span>
+      </div>
+      <div style="background: #e8f4e8; border-radius: 5px; padding: 6px 11px; font-size: 9.8pt">Schau auf die Nenner: <b>4 · 3 = 12</b><br>Prüfe den Zähler: 3 · 3 = 9 ✓<br>→ <b>mit 3 erweitert</b></div>
+      <div style="font-size: 8.5pt; color: #444444; margin-top: 6px">Zahlen werden <b>größer</b> → erweitert · <b>kleiner</b> → gekürzt</div>
+    </div>
+    <div style="flex: 1; position: relative; border: 2px solid #2e7d32; border-radius: 8px; padding: 16px 16px 12px; margin: 0 0 20px">
+      <div style="position: absolute; top: -12px; left: 12px; width: 22px; height: 22px; border-radius: 4px; background: #2e7d32; color: #ffffff; font-weight: 700; font-size: 10pt; display: flex; align-items: center; justify-content: center">4</div>
+      <h3 style="font-size: 8.5pt; letter-spacing: 0.05em; margin: 0 0 6px; color: #2e7d32">SO WEIT WIE MÖGLICH KÜRZEN</h3>
+      <div class="big" style="text-align: center; margin: 2px 0 6px">
+        <span class="fr"><span>24</span><span>30</span></span>
+        <span style="font-weight: 700; color: #2e7d32">&nbsp;: 2 →&nbsp;</span>
+        <span class="fr"><span>12</span><span>15</span></span>
+        <span style="font-weight: 700; color: #2e7d32">&nbsp;: 3 →&nbsp;</span>
+        <span class="fr"><span><b>4</b></span><span><b>5</b></span></span>
+      </div>
+      <div style="background: #e8f4e8; border-radius: 5px; padding: 6px 11px; font-size: 9.8pt">Kürze immer weiter, bis <b>keine Zahl mehr</b> in Zähler <b>und</b> Nenner passt.</div>
+      <div style="font-size: 8.5pt; color: #444444; margin-top: 6px">Probiere 2, 3, 5 … – die Teilbarkeitsregeln helfen!</div>
+    </div>
+  </div>
+
+  <div style="border: 2px solid #333333; border-radius: 8px; padding: 8px 16px; display: flex; gap: 26px; align-items: center; font-size: 10pt">
+    <b style="font-size: 10.5pt; letter-spacing: 0.05em">MERKE</b>
+    <span>✓ Immer <b>oben und unten</b> dasselbe rechnen</span>
+    <span>✓ Der <b>Wert</b> bleibt gleich</span>
+    <span>✓ Nie mit <b>0</b></span>
+  </div>
+</div></div></div></div><div class="sh"><h3>Seite 2 · Arbeitsplan</h3><div class="sheetwrap" data-sheet ><style>#t1foerder1 a{color:#333333}
+#t1foerder1 a:hover{color:#000000}
+#t1foerder1 .tile{border:2px solid;border-radius:8px;text-align:center;padding:6px 3px 7px}
+#t1foerder1 .tile .n{font-size:21pt;font-weight:700;line-height:1.1}
+#t1foerder1 .tile .w{font-size:8.8pt;color:#444444;line-height:1.15;min-height:14px;display:flex;align-items:center;justify-content:center}
+#t1foerder1 .tile .ck{display:flex;justify-content:center;gap:7px;margin-top:4px}
+#t1foerder1 .tile .ck span{width:16px;height:16px;border:1.5px solid #555555;border-radius:2px;display:inline-block}
+#t1foerder1 .t-ge{border-color:#d9ad00}
+#t1foerder1 .t-ge .n{color:#8a6d00}
+#t1foerder1 .t-or{border-color:#e07a2e}
+#t1foerder1 .t-or .n{color:#c25f14}
+#t1foerder1 .t-st{border-color:#8c8c8c;padding:5px 2px 6px}
+#t1foerder1 .t-st .n{color:#555555;font-size:18pt}
+#t1foerder1 .t-st .w{font-size:8pt}
+#t1foerder1 .box{width:13px;height:13px;border:1.5px solid #555555;border-radius:2px;display:inline-block}</style><div id="t1foerder1" class="sheet"><div style="width: 794px; height: 1123px; box-sizing: border-box; padding: 42px 49px; background: #ffffff; color: #1a1a1a; font-family: Arial, 'Liberation Sans', Helvetica, sans-serif; font-size: 10.5pt; line-height: 1.38; overflow: hidden">
+
+  <div style="display: flex; justify-content: space-between; align-items: flex-start">
+    <span style="display: inline-block; background: #333333; color: #ffffff; font-weight: 700; font-size: 8pt; letter-spacing: 0.08em; padding: 5px 16px 5px 10px; clip-path: polygon(0 0, 100% 0, 92% 100%, 0 100%)">ARBEITSPLAN</span>
+    <span style="font-size: 8.5pt; color: #666666; margin-top: 4px">Name: ______________________ &nbsp; Klasse: _____</span>
+  </div>
+  <h1 style="font-size: 19pt; margin: 8px 0 2px">Brüche erweitern und kürzen</h1>
+  <p style="color: #666666; font-size: 8.5pt; margin: 0 0 12px">Arbeitsheft S. 11–16 · ca. 3–4 Stunden</p>
+
+  <div style="display: flex; gap: 8px; margin: 4px 0 12px">
+    <div style="flex: 1; border: 1.5px solid #bbbbbb; border-radius: 6px; padding: 6px 8px; font-size: 9pt; display: flex; gap: 7px; align-items: center; line-height: 1.25"><span style="flex: 0 0 20px; height: 20px; border-radius: 50%; background: #333333; color: #ffffff; font-weight: 700; display: flex; align-items: center; justify-content: center">1</span><span>Du arbeitest im <b>Arbeitsheft</b> – direkt auf der Seite</span></div>
+    <div style="flex: 1; border: 1.5px solid #bbbbbb; border-radius: 6px; padding: 6px 8px; font-size: 9pt; display: flex; gap: 7px; align-items: center; line-height: 1.25"><span style="flex: 0 0 20px; height: 20px; border-radius: 50%; background: #333333; color: #ffffff; font-weight: 700; display: flex; align-items: center; justify-content: center">2</span><span><b>Start</b>, dann <b>Basis</b> komplett</span></div>
+    <div style="flex: 1; border: 1.5px solid #bbbbbb; border-radius: 6px; padding: 6px 8px; font-size: 9pt; display: flex; gap: 7px; align-items: center; line-height: 1.25"><span style="flex: 0 0 20px; height: 20px; border-radius: 50%; background: #333333; color: #ffffff; font-weight: 700; display: flex; align-items: center; justify-content: center">3</span><span><b>Plus</b> – so viele du schaffst</span></div>
+    <div style="flex: 1; border: 1.5px solid #bbbbbb; border-radius: 6px; padding: 6px 8px; font-size: 9pt; display: flex; gap: 7px; align-items: center; line-height: 1.25"><span style="flex: 0 0 20px; height: 20px; border-radius: 50%; background: #333333; color: #ffffff; font-weight: 700; display: flex; align-items: center; justify-content: center">4</span><span><b>Bonus</b> – Aufgaben aus dem Buch, ins Heft</span></div>
+  </div>
+
+  <div style="font-size: 8.5pt; color: #444444; display: flex; align-items: center; gap: 6px; margin: 0 0 10px">Kästchen unter jeder Aufgabe: <span class="box"></span> links = erledigt &nbsp;·&nbsp; <span class="box"></span> rechts = kontrolliert</div>
+
+  <div style="border: 2px solid #e0b400; border-radius: 10px; overflow: hidden">
+    <div style="background: #f2c400; color: #1a1a1a; padding: 7px 12px; font-weight: 700; font-size: 12.5pt; letter-spacing: 0.04em; display: flex; justify-content: space-between; align-items: baseline">GELB <small style="font-size: 9pt; font-weight: 400">Arbeitsheft S. 11–16</small></div>
+
+    <div style="padding: 8px 16px 10px; background: #fafafa">
+      <div style="font-weight: 700; font-size: 10pt; letter-spacing: 0.04em">START</div>
+      <div style="font-size: 8.5pt; color: #555555; margin: 0 0 5px">Wiederholung – Arbeitsheft S. 11–13</div>
+      <div style="display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px">
+        <div class="tile t-st"><div class="n">1</div><div class="w">Zähler und Nenner</div><div class="ck"><span></span><span></span></div></div>
+        <div class="tile t-st"><div class="n">2</div><div class="w">Brüche einkreisen</div><div class="ck"><span></span><span></span></div></div>
+        <div class="tile t-st"><div class="n">3</div><div class="w">Brüche färben</div><div class="ck"><span></span><span></span></div></div>
+        <div class="tile t-st"><div class="n">4</div><div class="w">Brüche darstellen</div><div class="ck"><span></span><span></span></div></div>
+        <div class="tile t-st"><div class="n">5</div><div class="w">Bruch benennen</div><div class="ck"><span></span><span></span></div></div>
+        <div class="tile t-st"><div class="n">6</div><div class="w">Tabelle</div><div class="ck"><span></span><span></span></div></div>
+      </div>
+    </div>
+
+    <div style="padding: 8px 16px 10px; border-top: 1.5px dashed #c8c8c8">
+      <div style="font-weight: 700; font-size: 10pt; letter-spacing: 0.04em">BASIS</div>
+      <div style="font-size: 8.5pt; color: #555555; margin: 0 0 5px">Pflicht – alle 5 Aufgaben</div>
+      <div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px">
+        <div class="tile t-ge"><div class="n">1</div><div class="w">Pizza erweitern</div><div class="ck"><span></span><span></span></div></div>
+        <div class="tile t-ge"><div class="n">3</div><div class="w">erweitern mit 4</div><div class="ck"><span></span><span></span></div></div>
+        <div class="tile t-ge"><div class="n">4</div><div class="w">mit welcher Zahl?</div><div class="ck"><span></span><span></span></div></div>
+        <div class="tile t-ge"><div class="n">6</div><div class="w">Auflauf kürzen</div><div class="ck"><span></span><span></span></div></div>
+        <div class="tile t-ge"><div class="n">9</div><div class="w">kürzen mit 3</div><div class="ck"><span></span><span></span></div></div>
+      </div>
+    </div>
+
+    <div style="padding: 8px 16px 10px; border-top: 1.5px dashed #c8c8c8">
+      <div style="font-weight: 700; font-size: 10pt; letter-spacing: 0.04em">PLUS</div>
+      <div style="font-size: 8.5pt; color: #555555; margin: 0 0 5px">der Reihe nach</div>
+      <div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px">
+        <div class="tile t-ge"><div class="n">2</div><div class="w">Kuchen erweitern</div><div class="ck"><span></span><span></span></div></div>
+        <div class="tile t-ge"><div class="n">5</div><div class="w">Nenner 12</div><div class="ck"><span></span><span></span></div></div>
+        <div class="tile t-ge"><div class="n">7</div><div class="w">Torte kürzen</div><div class="ck"><span></span><span></span></div></div>
+        <div class="tile t-ge"><div class="n">8</div><div class="w">Auflauf kürzen</div><div class="ck"><span></span><span></span></div></div>
+        <div class="tile t-ge"><div class="n">10</div><div class="w">mit welcher Zahl kürzen?</div><div class="ck"><span></span><span></span></div></div>
+        <div class="tile t-ge"><div class="n">11</div><div class="w">so weit wie möglich</div><div class="ck"><span></span><span></span></div></div>
+        <div class="tile t-ge"><div class="n">12</div><div class="w">gleiche Brüche</div><div class="ck"><span></span><span></span></div></div>
+        <div class="tile t-ge"><div class="n">13</div><div class="w">Lücken füllen</div><div class="ck"><span></span><span></span></div></div>
+      </div>
+    </div>
+
+    <div style="padding: 8px 16px 10px; border-top: 1.5px dashed #c8c8c8">
+      <div style="font-weight: 700; font-size: 10pt; letter-spacing: 0.04em; color: #c25f14">BONUS</div>
+      <div style="font-size: 8.5pt; color: #555555; margin: 0 0 5px">weiter mit Orange – Buch S. 31, ins Heft</div>
+      <div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px">
+        <div class="tile t-or"><div class="n">1</div><div class="w">erweitern</div><div class="ck"><span></span><span></span></div></div>
+        <div class="tile t-or"><div class="n">2</div><div class="w">Bild erweitern</div><div class="ck"><span></span><span></span></div></div>
+        <div class="tile t-or"><div class="n">3</div><div class="w">kürzen</div><div class="ck"><span></span><span></span></div></div>
+        <div class="tile t-or"><div class="n">4</div><div class="w">Bild kürzen</div><div class="ck"><span></span><span></span></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top: 10px; border: 2px solid #555555; border-radius: 8px; padding: 8px 16px 9px; background: #f5f5f5; font-size: 9.5pt">
+    <div style="font-weight: 700; font-size: 10.5pt; margin-bottom: 3px">Ich komme nicht weiter – was mache ich?</div>
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px 24px">
+      <div>1. Ich lese die Aufgabe noch einmal <b>gründlich</b> durch.</div>
+      <div>3. Ich frage meine Nachbarin oder meinen Nachbarn – <b>im Flüsterton</b>.</div>
+      <div>2. Ich schaue auf die <b>Vorderseite</b> (Erklärungen).</div>
+      <div>4. Ich frage die <b>Lehrkraft</b>.</div>
+    </div>
+    <div style="font-size: 8.5pt; color: #444444; margin-top: 4px">Lösungen nutze ich erst <b>nach</b> der Aufgabe – zum Kontrollieren.</div>
+  </div>
+</div></div></div></div></div>
+</section>
+</main>
+</div>
+<script>
+(function(){
+var N=1,weg='orange';
+function fit(){document.querySelectorAll('[data-sheet]').forEach(function(w){if(w.offsetParent===null)return;var s=w.querySelector('.sheet'),k=w.clientWidth/794;if(!k)return;s.style.transform='scale('+k+')';w.style.height=(1123*k)+'px'})}
+window.addEventListener('resize',fit);
+if(window.ResizeObserver)document.querySelectorAll('.sheets').forEach(function(e){new ResizeObserver(fit).observe(e)});
+function route(){var p=location.hash==='#arbeitsplan';
+document.getElementById('anim').hidden=p;document.getElementById('plan').hidden=!p;
+var e=document.getElementById('tab-e'),a=document.getElementById('tab-a');
+if(p){a.setAttribute('aria-current','page');e.removeAttribute('aria-current')}else{e.setAttribute('aria-current','page');a.removeAttribute('aria-current')}
+fit();setTimeout(fit,60);window.scrollTo(0,0)}
+window.addEventListener('hashchange',route);route();
+var seg=document.getElementById('weg');
+seg.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;weg=b.dataset.w;
+seg.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});
+document.getElementById('w-orange').hidden=weg!=='orange';document.getElementById('w-foerder').hidden=weg!=='foerder';
+document.getElementById('pdflink').href='pdf/thema'+N+'-'+weg+'.pdf';
+fit();setTimeout(fit,60)});
+var sv=document.getElementById('pdfsave'),lk=document.getElementById('pdflink'),msg=document.getElementById('pdfmsg');
+lk.hidden=false;
+(async function(){try{var d=window.claude&&await claude.use('downloads');if(!d)return;sv.hidden=false;lk.hidden=true;
+sv.addEventListener('click',async function(){msg.textContent='';
+try{var r=await fetch('pdf/thema'+N+'-'+weg+'.pdf');if(!r.ok)throw 0;var bl=await r.blob();
+await d.save({filename:'Brueche_Thema'+N+'_'+(weg==='orange'?'Orange-Pink':'Foerderweg')+'.pdf',data:bl});msg.textContent='Gespeichert. Jetzt ausdrucken.'}
+catch(e){msg.textContent=(e&&e.code==='declined')?'Abgebrochen.':'Das Speichern hat nicht geklappt. Bitte frag deine Lehrkraft nach dem Blatt.'}})}catch(e){}})();
+})();
+</script>
+<script src="anim.js"></script><script src="fr.js"></script><script src="scenes-1.js"></script><script src="anim-ui.js"></script><script src="pen.js"></script>
+</body>
+</html>
