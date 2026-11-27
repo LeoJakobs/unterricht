@@ -676,7 +676,7 @@ document.addEventListener('fullscreenchange',onFs);document.addEventListener('we
 /* ---------- Werkzeugleiste ---------- */
 var bar=document.createElement('div');bar.id='pz-bar';
 function B(attr,title,label,icon){return '<button type="button" '+attr+' title="'+title+'" aria-label="'+label+'">'+icon+'</button>'}
-bar.innerHTML='<button type="button" id="pz-fab" aria-expanded="false" aria-controls="pz-panel" title="Stift-Werkzeug">'+big(I.pen,28)+'</button>'+
+bar.innerHTML='<button type="button" id="pz-fab" aria-expanded="false" aria-controls="pz-panel" title="Leiste ein- oder ausklappen – das Werkzeug bleibt aktiv">'+big(I.pen,28)+'</button>'+
 '<div id="pz-panel" hidden role="toolbar" aria-label="Stift-Werkzeug">'+
 B('id="pz-pres-btn"','Präsentationsmodus (P)','Präsentationsmodus',I.pres)+
 B('id="pz-tafel-btn"','Tafel: leere Karo-Seite (T)','Tafel',I.tafel)+
@@ -721,7 +721,9 @@ function sync(){
  fab.innerHTML=st.mode==='sticker'?'<span style="font-size:26px;line-height:1;font-family:Apple Color Emoji,Segoe UI Emoji,Noto Color Emoji,sans-serif">'+(BADGES.indexOf(st.stk)>=0?'🏷️':st.stk)+'</span>':big(I[st.mode==='off'?'pen':st.mode]||I.pen,28);
  fab.style.boxShadow=st.mode==='off'?'':'0 0 0 4px '+(st.mode==='laser'?'#ff2a2a':st.mode==='mark'?MARK[st.color]:inkMode()?COLORS[st.color][0]:'#6D3FE8')+',0 8px 22px -8px rgba(20,30,90,.6)';
  if(st.mode!=='laser'){dot=null;kick()}}
-function openPanel(){panel.hidden=false;fab.setAttribute('aria-expanded','true')}
+/* Leiste eingeklappt lassen, wenn man sie selbst eingeklappt hat; das Werkzeug bleibt dabei aktiv */
+var userCollapsed=false;
+function openPanel(force){if(userCollapsed&&!force)return;panel.hidden=false;fab.setAttribute('aria-expanded','true')}
 function setMode(m){if(ed)edCommit();if(m!=='lasso')clearSel();hidePaste();st.mode=m;act=null;if(m!=='off')openPanel();sync()}
 function setTafel(on){clearSel();if(on&&st.blatt)closeBlatt();st.tafel=on;tafel.hidden=!on;if(on&&st.mode!=='laser'&&st.mode!=='mark')st.mode='pen';act=null;if(on)openPanel();sync()}
 function pickColor(i){st.color=i;saveSettings();if(ed)ta.style.color=COLORS[i][0];if(sel){recolorSel();sync();return}if(!inkMode()&&st.mode!=='text'&&st.mode!=='sticker')setMode('pen');else sync()}
@@ -731,7 +733,7 @@ function closePops(except){if(except!=='w'){wpop.hidden=true;document.getElement
  if(except!=='pz-cpop'){document.getElementById('pz-cpop').hidden=true;document.getElementById('pz-cbtn').setAttribute('aria-expanded',false)}
  if(except!=='pz-spop'){document.getElementById('pz-spop').hidden=true;document.getElementById('pz-sbtn').setAttribute('aria-expanded',false)}}
 function setSlotColor(c){if(st.mode==='mark')MARK[st.color]=c;else COLORS[st.color][0]=c;saveSettings();if(sel)recolorSel();else if(!inkMode()&&st.mode!=='sticker'&&st.mode!=='text')setMode('pen');if(ed)ta.style.color=c;sync()}
-fab.addEventListener('click',function(){var o=panel.hidden;panel.hidden=!o;fab.setAttribute('aria-expanded',o);if(!o){toggleW(false);if(!ovHost())setMode('off')}fab.blur()});
+fab.addEventListener('click',function(){var o=panel.hidden;panel.hidden=!o;fab.setAttribute('aria-expanded',o);userCollapsed=!o;if(!o)closePops();fab.blur()});
 panel.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;b.blur();
  if(b.closest('#pz-cpop')){if(b.dataset.pc)setSlotColor(b.dataset.pc);return}
  if(b.closest('#pz-spop')){if(b.dataset.st){st.stk=b.dataset.st;saveSettings();setMode('sticker');closePops()}return}
